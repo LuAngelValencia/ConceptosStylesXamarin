@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             x:Class="ConceptosStyles.Views.OlvidoContrasena"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:custom="clr-namespace:ConceptosStyles;assembly=ConceptosStyles"
+             BackgroundImage="fondoLogin.png">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" TranslationY="-100">
+            <Image Source="logo.png" HorizontalOptions="Center"/>
+        </StackLayout>
+
+       
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" Padding="0,0,0,15">
+            <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
+                <Image Source="ic_user.png"  HorizontalOptions="Start" VerticalOptions="End"  TranslationX="45" TranslationY="-5"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="Start">
+                <custom:LoginEntry Placeholder="Ingrese su RENDERED" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
+            </StackLayout>
+        </StackLayout>
+
+
+   
+
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" TranslationY="30">
+            <Button Style="{DynamicResource PrincipalActionButton}" Text="RECORDAR">
+            </Button>
+        </StackLayout>
+
+        
+
+
+    </StackLayout>
+    
+</ContentPage>

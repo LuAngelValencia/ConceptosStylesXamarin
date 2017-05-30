@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:custom="clr-namespace:ConceptosStyles;assembly=ConceptosStyles"
+             x:Class="ConceptosStyles.Views.Dashboard"
+             BackgroundColor="#EEEEEE">
+
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0, 50,0,0">
+            <Label Style="{DynamicResource LabelCenterBold}" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="Consulte los diferentes créditos y sus procesos actuales de verificación."></Label>         
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label Style="{DynamicResource LabelParagraph}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Text="Acceda a los módulos de interés para hacer seguimiento, comprobar su estado y validar"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label Style="{DynamicResource LabelParagraph}" HorizontalTextAlignment="Center" Text="la información enviada para la apertura de créditos con nuestros asesores."></Label>
+        </StackLayout>
+
+        <StackLayout>
+            <Label />
+            <BoxView 
+            HeightRequest="1" 
+            BackgroundColor="Black" 
+            HorizontalOptions="FillAndExpand" />
+            <Label />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0, 50,0,0">
+            <StackLayout>
+                <custom:DashboardButton Style="{DynamicResource BoxDashboard}" BorderRadius = "8" BorderWidth="1" BorderColor="#CCCCCC">
+                </custom:DashboardButton>
+                <Image Source="aprobado.png" Style="{DynamicResource IconDashboard}"></Image>
+                <Image Source="aprobadoCircle.png" Style="{DynamicResource CircleDashboard}"></Image>
+                <Label Text="CRÉDITO APROBADOS" Style="{DynamicResource LabelBoxDashboard}"></Label>
+                <Label x:Name="lblAprobadosCount" Text="10" Style="{DynamicResource CounterDashboard}"></Label>
+            </StackLayout>
+
+            <StackLayout>
+                <custom:DashboardButton Style="{DynamicResource BoxDashboard}" BorderRadius = "8" BorderWidth="1" BorderColor="#CCCCCC">
+                </custom:DashboardButton>
+                <Image Source="estudio.png" Style="{DynamicResource IconDashboard}"></Image>
+                <Image Source="estudioCircle.png" Style="{DynamicResource CircleDashboard}"></Image>
+                <Label Text="EN ESTUDIO" Style="{DynamicResource LabelBoxDashboard}"></Label>
+                <Label x:Name="lblEstudioCount" Text="20" Style="{DynamicResource CounterDashboard}"></Label>
+            </StackLayout>
+
+            <StackLayout>
+                <custom:DashboardButton Style="{DynamicResource BoxDashboard}" BorderRadius = "8" BorderWidth="1" BorderColor="#CCCCCC">
+                </custom:DashboardButton>
+                <Image Source="pendiente.png" Style="{DynamicResource IconDashboard}"></Image>
+                <Image Source="pendienteCircle.png" Style="{DynamicResource CircleDashboard}"></Image>
+                <Label Text="PENDIENTES" Style="{DynamicResource LabelBoxDashboard}"></Label>
+                <Label x:Name="lblPendientesCount" Text="30" Style="{DynamicResource CounterDashboard}"></Label>
+            </StackLayout>
+
+            <!--<StackLayout>
+                <custom:DashboardButton Style="{DynamicResource BoxDashboard}" BorderRadius = "8" BorderWidth="1" BorderColor="#CCCCCC">
+                </custom:DashboardButton>
+                <Image Source="preaprobado.png" Style="{DynamicResource IconDashboard}"></Image>
+                <Image Source="preaprobadoCircle.png" Style="{DynamicResource CircleDashboard}"></Image>
+                <Label Text="PREAPROBADOS" Style="{DynamicResource LabelBoxDashboard}"></Label>
+                <Label x:Name="lblPreaprobadosCount" Text="40" Style="{DynamicResource CounterDashboard}"></Label>
+            </StackLayout>-->
+
+            <StackLayout>
+                <custom:DashboardButton Style="{DynamicResource BoxDashboard}" BorderRadius = "8" BorderWidth="1" BorderColor="#CCCCCC">
+                </custom:DashboardButton>
+                <Image Source="negado.png" Style="{DynamicResource IconDashboard}"></Image>
+                <Image Source="negadoCircle.png" Style="{DynamicResource CircleDashboard}"></Image>
+                <Label Text="NEGADOS" Style="{DynamicResource LabelBoxDashboard}"></Label>
+                <Label x:Name="lblNegadosCount" Text="05" Style="{DynamicResource CounterDashboard}"></Label>
+            </StackLayout>
+        </StackLayout>
+        
+
+    </StackLayout>
+
+</ContentPage>

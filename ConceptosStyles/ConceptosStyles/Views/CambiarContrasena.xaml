@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ConceptosStyles.Views.CambiarContrasena"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             BackgroundColor="#EEEEEE">
+
+    
+    <StackLayout>
+        <StackLayout Margin="20,20,20,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" BackgroundColor="White">
+            <AbsoluteLayout HorizontalOptions="StartAndExpand"  VerticalOptions="Start">
+
+                <Image Source="cambioContrasenaBackground.png" VerticalOptions="StartAndExpand"></Image>
+                <StackLayout VerticalOptions="Start" Orientation="Vertical" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="CenterAndExpand" AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.5, 0.5">
+                    <controls:CircleImage
+                                            Grid.Column="1"
+                                            Grid.Row="1"                                            
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            Source="ic_persona.png"
+                                            WidthRequest="150" HeightRequest="150" Margin="0,0,0,80"/>
+                    <Label Text="Sara Catalina Cadavid" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontSize="Large"></Label>
+                    <Label Text="Almacén Calza Todo / Cartagena" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold"></Label>
+                </StackLayout>
+            </AbsoluteLayout>
+            <StackLayout HorizontalOptions="StartAndExpand"  VerticalOptions="CenterAndExpand">
+                <StackLayout Margin="0,0,0,20">
+                    <Label Text="Antigüa Contraseña" Style="{DynamicResource LabelsForm}"></Label>
+                    <Entry HorizontalOptions="FillAndExpand" WidthRequest="300"></Entry>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,20">
+                    <Label Text="Nueva Contraseña" Style="{DynamicResource LabelsForm}"></Label>
+                    <Entry HorizontalOptions="FillAndExpand" WidthRequest="300"></Entry>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,20">
+                    <Label Text="Confirmar Nueva Contraseña" Style="{DynamicResource LabelsForm}"></Label>
+                    <Entry HorizontalOptions="FillAndExpand" WidthRequest="300"></Entry>
+                </StackLayout>
+            </StackLayout>
+            
+
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Margin="0,0,20,20">
+            <Button Text="CAMBIAR" Style="{DynamicResource PrincipalInnerActionButton}"></Button>
+        </StackLayout>
+    </StackLayout>
+
+    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" HeightRequest="100">
+        <Button Text="CAMBIAR" Style="{DynamicResource PrincipalActionButton}"></Button>
+    </StackLayout>-->
+</ContentPage>

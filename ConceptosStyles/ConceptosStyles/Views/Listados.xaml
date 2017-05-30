@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ConceptosStyles.Views.Listados"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             BackgroundColor="#EEEEEE">
+    <AbsoluteLayout>
+        <ScrollView Margin="20,20,20,20" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <sync:SfListView x:Name="listView"
+                       ItemSize="150"
+                       ItemsSource="{Binding BookInfo}"
+                       SelectionBackgroundColor="#d3d3d3">
+
+                <sync:SfListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0" >
+                                <Grid  HorizontalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.40*" />
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.35*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"  Grid.Row="0"  Text="Nobre del cliente:" TextColor="#858585"></Label>
+                                    <Label Grid.Column="1"  Grid.Row="0" Text="Atendido por:" TextColor="#858585"></Label>
+                                    <Label Grid.Column="2" Grid.Row="0" Text="Monto aprobado:" TextColor="#858585" ></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid Padding="10" BackgroundColor="White" Margin="0,0,0,10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.10*" />
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.18*" />
+                                        <ColumnDefinition Width="0.18*" />
+                                        <ColumnDefinition Width="0.04*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Grid.RowSpan="3" Source="ic_persona.png" HorizontalOptions="Start"></Image>
+
+                                    <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" TextColor="Black" FontAttributes="Bold" FontSize="16"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding CcCliente}" TextColor="Black"  FontSize="14"></Label>
+                                    <Label Grid.Column="1" Grid.Row="2" Text="{Binding Estado}" TextColor="Green"  FontAttributes="Bold" FontSize="15"></Label>
+
+                                    <Label Grid.Column="2" Grid.Row="0" Text="{Binding NombreAsesor}" TextColor="Black"  FontSize="14"></Label>
+                                    <Label Grid.Column="2" Grid.Row="1" Text="Teléfono: 987 6543" TextColor="Black"  FontSize="14"></Label>
+                                    <Label Grid.Column="2" Grid.Row="2" Text="Fecha atención: Oct. 31 / 2016" TextColor="Black"  FontSize="14"></Label>
+
+                                    <Label Grid.Column="3"  Grid.Row="0" TextColor="Black" Text="Cupo del crédito" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" TextColor="#ff6a00" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                                    <Label Grid.Column="4"  Grid.Row="0" TextColor="Black" Text="Monto Disponible" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" TextColor="#69b02b" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                                    <Label Grid.Column="5" Grid.RowSpan="3" HorizontalOptions="Center" VerticalOptions="Center" Rotation="90" FontSize="23" Text="..." ClassId="{Binding Numerador}">
+                                        <Label.GestureRecognizers>
+                                            <!--<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>-->
+                                        </Label.GestureRecognizers>
+                                    </Label>
+
+                                    <!--<Label Grid.Column="3" Text="Monto disponible"></Label>
+                        <Label Grid.Column="3" Text="$300.000"></Label>-->
+                                    <!--<Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                        <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>-->
+                                </Grid>
+                            </StackLayout>
+                            <ContentView  BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                                <Grid Padding="10" HorizontalOptions="CenterAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.3*" />
+                                        <ColumnDefinition Width="0.3*" />
+                                        <ColumnDefinition Width="0.3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" Text="Solicitud"></Label>
+                                    <Label Grid.Column="1" Grid.Row="0" Text="Pago"></Label>
+                                    <Label Grid.Column="2" Grid.Row="0" Text="Histórico"></Label>
+
+                                    <Label Grid.Column="0" Grid.Row="1" Text="Nuevo Crédito"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1" Text="Aumento de Crédito"></Label>
+                                </Grid>
+                            </ContentView>
+                        </StackLayout>
+                    </DataTemplate>
+                </sync:SfListView.ItemTemplate>
+
+
+
+            </sync:SfListView>
+        </ScrollView>
+    </AbsoluteLayout>
+
+</ContentPage>
