@@ -37,34 +37,34 @@
             <Label Grid.Column="2" Grid.Row="2" Text="Fecha atención: Oct. 31 / 2016" TextColor="Black"  FontSize="14"></Label>
 
             <Label Grid.Column="3"  Grid.Row="0" TextColor="Black" Text="Cupo del crédito" HorizontalOptions="Center"></Label>
-            <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" TextColor="#ff6a00" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" Style="{DynamicResource LabelsCupoCredito}"></Label>
 
             <Label Grid.Column="4"  Grid.Row="0" TextColor="Black" Text="Monto Disponible" HorizontalOptions="Center"></Label>
-            <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" TextColor="#69b02b" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>          
+            <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" Style="{DynamicResource LabelsMontoDisponible}"></Label>          
            
         </Grid>
         <Frame>
             <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand">
                 <StackLayout Spacing="20" Orientation="Horizontal" Margin="0,0,0,20">
                     <Image Source="ic_solicitud.png" ></Image>
-                    <Label HorizontalOptions="Center" Text="Solicitud" FontSize="18" WidthRequest="200" FontAttributes="Bold" TextColor="Black" Margin="0,15,0,0"></Label>
+                    <Label Text="Solicitud" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
 
                     <Image Source="ic_pago.png"></Image>
-                    <Label HorizontalOptions="Center" Text="Pago" FontSize="18" WidthRequest="200" FontAttributes="Bold" TextColor="Black" Margin="0,15,0,0"></Label>
+                    <Label Text="Pago" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
 
                     <Image Source="ic_historico.png"></Image>
-                    <Label HorizontalOptions="Center" Text="Histórico" FontSize="18" WidthRequest="200" FontAttributes="Bold" TextColor="Black" Margin="0,15,0,0"></Label>
+                    <Label Text="Histórico" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
                 </StackLayout>
 
                 <StackLayout Spacing="20" Orientation="Horizontal">
                     <Image Source="ic_credito.png"></Image>
-                    <Label HorizontalOptions="Center" Text="Nuevo Crédito" FontSize="18" WidthRequest="200" FontAttributes="Bold" TextColor="Black" Margin="0,15,0,0"></Label>
+                    <Label Text="Nuevo Crédito" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
 
                     <Image Source="ic_aumento.png"></Image>
-                    <Label HorizontalOptions="Center" Text="Aumento de Crédito" FontSize="18" WidthRequest="200" FontAttributes="Bold" TextColor="Black" Margin="0,15,0,0"></Label>
+                    <Label Text="Aumento de Crédito" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
 
                     <Image Source="ic_cerrar.png"></Image>
-                    <Label HorizontalOptions="Center" Text="Cerrar" FontSize="18" WidthRequest="200" FontAttributes="Bold" TextColor="Black" Margin="0,15,0,0"></Label>
+                    <Label Text="Cerrar" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
                 </StackLayout>
             </StackLayout>
         </Frame>

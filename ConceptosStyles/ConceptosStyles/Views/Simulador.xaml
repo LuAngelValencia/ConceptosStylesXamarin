@@ -7,7 +7,7 @@
              xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
              xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
              xmlns:local ="clr-namespace:ConceptosStyles;assembly=ConceptosStyles"
-             BackgroundColor="#EEEEEE">
+             Style="{DynamicResource PrincipalBackground}">
 
     <ContentPage.Resources>
         <ResourceDictionary>

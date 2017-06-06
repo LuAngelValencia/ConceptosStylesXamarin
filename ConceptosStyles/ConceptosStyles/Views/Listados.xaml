@@ -5,7 +5,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ConceptosStyles.Views.Listados"
              xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             BackgroundColor="#EEEEEE">
+             Style="{DynamicResource PrincipalBackground}">
     <AbsoluteLayout>
         <ScrollView x:Name="FullScroll" Margin="20,20,20,20" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" IsClippedToBounds="False">
 
@@ -68,10 +68,10 @@
                                                 <Label Grid.Column="2" Grid.Row="2" Text="Fecha atención: Oct. 31 / 2016" TextColor="Black"  FontSize="14"></Label>
 
                                                 <Label Grid.Column="3"  Grid.Row="0" TextColor="Black" Text="Cupo del crédito" HorizontalOptions="Center"></Label>
-                                                <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" TextColor="#ff6a00" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                                <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" Style="{DynamicResource LabelsCupoCredito}"></Label>
 
                                                 <Label Grid.Column="4"  Grid.Row="0" TextColor="Black" Text="Monto Disponible" HorizontalOptions="Center"></Label>
-                                                <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" TextColor="#69b02b" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                                <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" Style="{DynamicResource LabelsMontoDisponible}"></Label>
 
                                                 <Label Grid.Column="5" Grid.RowSpan="3" HorizontalOptions="Center" VerticalOptions="Center" Rotation="90" FontSize="23" Text="..." ClassId="{Binding Numerador}">
                                                     <Label.GestureRecognizers>
@@ -87,47 +87,8 @@
                         </DataTemplate>
                     </sync:SfListView.ItemTemplate>
                 </sync:SfListView>
-
-                <AbsoluteLayout x:Name="ContextualMenu" IsVisible="false" BackgroundColor="Red" HorizontalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="WidthProportional"  AbsoluteLayout.LayoutBounds="0,0,1,-1" Padding="0" >
-                    <Grid Padding="10" HorizontalOptions="CenterAndExpand">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.3*" />
-                            <ColumnDefinition Width="0.3*" />
-                            <ColumnDefinition Width="0.3*" />
-                        </Grid.ColumnDefinitions>
-
-                        <Label Grid.Column="0" Grid.Row="0" Text="Solicitud"></Label>
-                        <Label Grid.Column="1" Grid.Row="0" Text="Pago"></Label>
-                        <Label Grid.Column="2" Grid.Row="0" Text="Histórico"></Label>
-
-                        <Label Grid.Column="0" Grid.Row="1" Text="Nuevo Crédito"></Label>
-                        <Label Grid.Column="1" Grid.Row="1" Text="Aumento de Crédito"></Label>
-                        <Label Grid.Column="2" Grid.Row="1" Text="Cerrar">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="CerrarContextualMenu"></TapGestureRecognizer>
-                            </Label.GestureRecognizers>
-                        </Label>
-                    </Grid>
-
-                </AbsoluteLayout>
-
             </AbsoluteLayout>
         </ScrollView>
-
-        <AbsoluteLayout x:Name="actIndBackground"                       
-                     BackgroundColor="#222222" Opacity="0.5"
-                     AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1"
-                     IsVisible="False">
-        </AbsoluteLayout>
-
-
-
     </AbsoluteLayout>
 
 </ContentPage>

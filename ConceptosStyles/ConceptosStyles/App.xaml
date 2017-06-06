@@ -18,6 +18,11 @@
           
           
           <!--DIRECTORIO DE RECURSOS FORMULARIO CREDINET APP-->
+          
+            <Style x:Key="PrincipalBackground" TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="#EEEEEE" />
+          </Style>
+          
           <Style x:Key="LabelsForm" TargetType="Label">
             <Setter Property="TextColor" Value="{StaticResource ColorForLabelsForms}" />
             <Setter Property="FontFamily" Value="sans-serif-medium" />
@@ -117,8 +122,49 @@
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontAttributes" Value="Bold"/>
           </Style>
-          
-          
+
+          <Style x:Key="LabelsTabbedMenu" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="FontSize" Value="Large" />
+          </Style>
+
+
+          <Style x:Key="LabelsTabbedMenuActivo" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="#002959" />
+            <Setter Property="FontSize" Value="Large" />
+          </Style>
+
+          <Style x:Key="LabelsGreyBox" TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#666666"/>
+            <Setter Property="Padding" Value="5,5,50,5"/>
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="Spacing" Value="0" />
+          </Style>
+
+          <Style x:Key="LabelsCupoCredito" TargetType="Label">
+            <Setter Property="TextColor" Value="#ff6a00"/>
+            <Setter Property="FontSize" Value="23"/>
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+          </Style>
+
+          <Style x:Key="LabelsMontoDisponible" TargetType="Label">
+            <Setter Property="TextColor" Value="#69b02b"/>
+            <Setter Property="FontSize" Value="23"/>
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+          </Style>
+
+          <Style x:Key="LabelsLogosMenuContextual" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="WidthRequest" Value="200" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="Margin" Value="0,15,0,0" />
+          </Style>
       
         </ResourceDictionary>
       </OnPlatform.Android>

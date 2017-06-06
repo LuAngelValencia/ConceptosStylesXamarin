@@ -6,7 +6,7 @@
              x:Class="ConceptosStyles.Views.CambiarContrasena"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
-             BackgroundColor="#EEEEEE">
+             Style="{DynamicResource PrincipalBackground}">
 
     
     <StackLayout>
