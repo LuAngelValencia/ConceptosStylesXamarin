@@ -36,6 +36,7 @@ namespace ConceptosStyles
             Container.RegisterTypeForNavigation<ContextualMenu>();
             Container.RegisterTypeForNavigation<SolicitudesDatosBasicos>();
             Container.RegisterTypeForNavigation<SolicitudesDatosBasicos>();
+            Container.RegisterTypeForNavigation<SolicitudesDatosBasicos>();
         }
     }
 }

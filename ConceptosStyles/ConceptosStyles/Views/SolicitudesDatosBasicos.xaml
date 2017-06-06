@@ -1,48 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-            prism:ViewModelLocator.AutowireViewModel="True"
-            x:Class="ConceptosStyles.Views.SolicitudesDatosBasicos">
-    <TabbedPage.Children>
-        <ContentPage Title="Page 2" Icon="ic_cerrar.png" BackgroundColor="#EEEEEE">
-            <StackLayout>
-                <Grid Padding="10" BackgroundColor="White" Margin="0,0,0,30">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ConceptosStyles.Views.SolicitudesDatosBasicos">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.10*" />
-                        <ColumnDefinition Width="0.25*" />
-                        <ColumnDefinition Width="0.25*" />
-                        <ColumnDefinition Width="0.18*" />
-                        <ColumnDefinition Width="0.18*" />
-                        <ColumnDefinition Width="0.04*" />
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Grid.RowSpan="3" Source="ic_persona.png" HorizontalOptions="Start"></Image>
+    <AbsoluteLayout>
+        <Grid Padding="10" BackgroundColor="White" Margin="0,0,0,30" AbsoluteLayout.LayoutBounds="0,0,-1,-1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-                    <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" TextColor="Black" FontAttributes="Bold" FontSize="16"></Label>
-                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding CcCliente}" TextColor="Black"  FontSize="14"></Label>
-                    <Label Grid.Column="1" Grid.Row="2" Text="{Binding Estado}" TextColor="Green"  FontAttributes="Bold" FontSize="15"></Label>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.10*" />
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.18*" />
+                <ColumnDefinition Width="0.18*" />
+                <ColumnDefinition Width="0.04*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Grid.RowSpan="3" Source="ic_persona.png" HorizontalOptions="Start"></Image>
 
-                    <Label Grid.Column="2" Grid.Row="0" Text="{Binding NombreAsesor}" TextColor="Black"  FontSize="14"></Label>
-                    <Label Grid.Column="2" Grid.Row="1" Text="Teléfono: 987 6543" TextColor="Black"  FontSize="14"></Label>
-                    <Label Grid.Column="2" Grid.Row="2" Text="Fecha atención: Oct. 31 / 2016" TextColor="Black"  FontSize="14"></Label>
+            <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" TextColor="Black" FontAttributes="Bold" FontSize="16"></Label>
+            <Label Grid.Column="1" Grid.Row="1" Text="{Binding CcCliente}" TextColor="Black"  FontSize="14"></Label>
+            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Estado}" TextColor="Green"  FontAttributes="Bold" FontSize="15"></Label>
 
-                    <Label Grid.Column="3"  Grid.Row="0" TextColor="Black" Text="Cupo del crédito" HorizontalOptions="Center"></Label>
-                    <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" TextColor="#ff6a00" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="2" Grid.Row="0" Text="{Binding NombreAsesor}" TextColor="Black"  FontSize="14"></Label>
+            <Label Grid.Column="2" Grid.Row="1" Text="Teléfono: 987 6543" TextColor="Black"  FontSize="14"></Label>
+            <Label Grid.Column="2" Grid.Row="2" Text="Fecha atención: Oct. 31 / 2016" TextColor="Black"  FontSize="14"></Label>
 
-                    <Label Grid.Column="4"  Grid.Row="0" TextColor="Black" Text="Monto Disponible" HorizontalOptions="Center"></Label>
-                    <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" TextColor="#69b02b" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="3"  Grid.Row="0" TextColor="Black" Text="Cupo del crédito" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="3"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding CupoCredito}" TextColor="#ff6a00" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
 
-                </Grid>
-            </StackLayout>
-            
-        </ContentPage>
-        <ContentPage Title="Page 3" Icon="ic_user.png" >
-        </ContentPage>
-    </TabbedPage.Children>
-</TabbedPage>
+            <Label Grid.Column="4"  Grid.Row="0" TextColor="Black" Text="Monto Disponible" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" TextColor="#69b02b" FontSize="23" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>

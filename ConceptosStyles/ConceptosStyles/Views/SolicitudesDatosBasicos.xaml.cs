@@ -2,7 +2,7 @@
 
 namespace ConceptosStyles.Views
 {
-    public partial class SolicitudesDatosBasicos : TabbedPage
+    public partial class SolicitudesDatosBasicos : ContentPage
     {
         public SolicitudesDatosBasicos()
         {
