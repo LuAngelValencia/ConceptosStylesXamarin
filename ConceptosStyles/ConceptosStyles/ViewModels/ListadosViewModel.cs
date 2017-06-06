@@ -12,11 +12,6 @@ namespace ConceptosStyles.ViewModels
 {
     public class ListadosViewModel : BindableBase
     {
-        
-
-       
-
-
         private ObservableCollection<BookInfo> bookInfo;
         
         public ObservableCollection<BookInfo> BookInfo
@@ -39,10 +34,18 @@ namespace ConceptosStyles.ViewModels
         public void ShowContextualMenu(int sender)
         {
             
-
             BookInfo[sender].IsVisible = true;
 
         }
+
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set { SetProperty(ref _isBusy, value); }
+        }
+
+       
 
         public void DisplayActionSheetAsync()
         {
@@ -63,6 +66,11 @@ namespace ConceptosStyles.ViewModels
             bookInfo.Add(new BookInfo() { Numerador = 6, NombreCliente = "Nicolas Alcaraz", CcCliente = "1.951.304", Estado = "ACTIVO", NombreAsesor = "Luis Angel Valencia", CupoCredito = "$900.000", MontoDisponible = "$900.000", IsVisible = false });
             bookInfo.Add(new BookInfo() { Numerador = 7, NombreCliente = "Diego Hoyos", CcCliente = "1.020.952", Estado = "ACTIVO", NombreAsesor = "Luis Angel Valencia", CupoCredito = "$600.000", MontoDisponible = "$300.000", IsVisible = false });
             bookInfo.Add(new BookInfo() { Numerador = 8, NombreCliente = "Daniel Rodas", CcCliente = "3.026.987", Estado = "ACTIVO", NombreAsesor = "Luis Angel Valencia", CupoCredito = "$700.000", MontoDisponible = "$40.000", IsVisible = false });
+        }
+
+        public BookInfo GetBookInfoById(string id)
+        {
+            return BookInfo.FirstOrDefault(x => x.CcCliente.Equals(id));
         }
     }
 }
