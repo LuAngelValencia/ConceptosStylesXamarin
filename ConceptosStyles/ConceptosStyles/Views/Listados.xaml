@@ -73,7 +73,7 @@
                                                 <Label Grid.Column="4"  Grid.Row="0" TextColor="Black" Text="Monto Disponible" HorizontalOptions="Center"></Label>
                                                 <Label Grid.Column="4"  Grid.Row="1" Grid.RowSpan="2" Text="{Binding MontoDisponible}" Style="{DynamicResource LabelsMontoDisponible}"></Label>
 
-                                                <Label Grid.Column="5" Grid.RowSpan="3" HorizontalOptions="Center" VerticalOptions="Center" Rotation="90" FontSize="23" Text="..." ClassId="{Binding Numerador}">
+                                                <Label Grid.Column="5" Grid.RowSpan="3" Text="..." ClassId="{Binding Numerador}" Style="{DynamicResource DotsSeparator}">
                                                     <Label.GestureRecognizers>
                                                         <TapGestureRecognizer Tapped="OnUserAnimationPupup" CommandParameter="{Binding .}"></TapGestureRecognizer>
                                                     </Label.GestureRecognizers>

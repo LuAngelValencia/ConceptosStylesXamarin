@@ -36,6 +36,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Animations\UserAnimation.cs" />
+    <Compile Include="ContentView\SolicitudesDatosBasicosContentView.xaml.cs">
+      <DependentUpon>SolicitudesDatosBasicosContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentView\SolicitudesDatosComplementariosContentView.xaml.cs">
+      <DependentUpon>SolicitudesDatosComplementariosContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentView\SolicitudesReferenciasLaboralesContentView.xaml.cs">
+      <DependentUpon>SolicitudesReferenciasLaboralesContentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomSelectionController.cs" />
     <Compile Include="DashboardButton.cs" />
     <Compile Include="LoginEntry.cs" />
@@ -51,6 +60,9 @@
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\SimuladorViewModel.cs" />
     <Compile Include="ViewModels\SolicitudesDatosBasicosViewModel.cs" />
+    <Compile Include="ViewModels\SolicitudesDatosComplementariosViewModel.cs" />
+    <Compile Include="ViewModels\SolicitudesDocumentosAdicionalesViewModel.cs" />
+    <Compile Include="ViewModels\SolicitudesPrincipalViewModel.cs" />
     <Compile Include="Views\CambiarContrasena.xaml.cs">
       <DependentUpon>CambiarContrasena.xaml</DependentUpon>
     </Compile>
@@ -72,8 +84,8 @@
     <Compile Include="Views\Simulador.xaml.cs">
       <DependentUpon>Simulador.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SolicitudesDatosBasicos.xaml.cs">
-      <DependentUpon>SolicitudesDatosBasicos.xaml</DependentUpon>
+    <Compile Include="Views\SolicitudesPrincipal.xaml.cs">
+      <DependentUpon>SolicitudesPrincipal.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -199,7 +211,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\SolicitudesDatosBasicos.xaml">
+    <EmbeddedResource Include="Views\SolicitudesPrincipal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContentView\SolicitudesDatosBasicosContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContentView\SolicitudesDatosComplementariosContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContentView\SolicitudesReferenciasLaboralesContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

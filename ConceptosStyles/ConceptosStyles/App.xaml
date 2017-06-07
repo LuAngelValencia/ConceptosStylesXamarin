@@ -169,12 +169,18 @@
           <Style x:Key="LabelsTHeader" TargetType="Label">
             <Setter Property="TextColor" Value="White"/>
             <Setter Property="BackgroundColor" Value="#666666"/>
-            <Setter Property="YAlign" Value="Center" />
             <Setter Property="FontSize" Value="Small" />
             <Setter Property="FontAttributes" Value="Bold" />
           </Style>
-      
-       
+          
+          <Style x:Key="DotsSeparator" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Rotation" Value="90" />
+            <Setter Property="FontSize" Value="23" />
+          </Style>
+
+
 
         </ResourceDictionary>
       </OnPlatform.Android>

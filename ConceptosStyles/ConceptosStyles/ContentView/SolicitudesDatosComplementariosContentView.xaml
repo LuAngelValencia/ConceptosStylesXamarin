@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConceptosStyles.ContentView.SolicitudesDatosComplementariosContentView"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             Style="{DynamicResource PrincipalBackground}">
+  <ContentView.Content>
+        <Frame Padding="50" BackgroundColor="White">
+            <StackLayout  Style="{DynamicResource LabelsGreyBox}">
+                <Label Text="Datos complementarios"   TextColor="White" ></Label>
+            </StackLayout>
+            <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+            
+            
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Estado civil *" TextColor="Black"></Label>
+                            <Picker x:Name="pckCivil">
+                                <Picker.Items>
+                                    <x:String>Casado</x:String>
+                                    <x:String>Viudo</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Personas a cargo *" TextColor="Black"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryPersonasCargo"  AllowNull="false"  FormatString="persona(s)"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Tipo de vivienda *" TextColor="Black"></Label>
+                            <Picker x:Name="pckTipoVivienda">
+                                <Picker.Items>
+                                    <x:String>Arriendo</x:String>
+                                    <x:String>Propia</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Otro teléfono" TextColor="Black"></Label>
+                            <Picker x:Name="pckOtroTelefono">
+                                <Picker.Items>
+                                    <x:String>Trabajo</x:String>
+                                    <x:String>Vivienda</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Número" TextColor="Black"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryNumero"  AllowNull="false"  FormatString="n"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Extensión" TextColor="Black"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryExtension"  AllowNull="false"  FormatString="n"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Correo electrónico" TextColor="Black"></Label>
+                            <Entry ></Entry>
+                        </StackLayout>                       
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

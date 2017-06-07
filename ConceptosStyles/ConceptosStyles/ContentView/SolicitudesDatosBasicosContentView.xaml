@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConceptosStyles.ContentView.SolicitudesDatosBasicosContentView"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Style="{DynamicResource PrincipalBackground}">
+  <ContentView.Content>
+        <Frame Padding="50" BackgroundColor="White">
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <StackLayout  Style="{DynamicResource LabelsGreyBox}">
+                        <Label Text="Datos personales"   TextColor="White" ></Label>
+                    </StackLayout>
+                    <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Fecha de expedición cédula *" TextColor="Black"></Label>
+                            <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+                                <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+                                <DatePicker.MinimumDate>
+                                    <sys:DateTime x:FactoryMethod="Parse">
+                                        <x:Arguments>
+                                            <x:String>Jan 1 1900</x:String>
+                                        </x:Arguments>
+                                    </sys:DateTime>
+                                </DatePicker.MinimumDate>
+                                <DatePicker.MaximumDate>
+                                    <sys:DateTime x:FactoryMethod="Parse">
+                                        <x:Arguments>
+                                            <x:String>Dec 31 2050</x:String>
+                                        </x:Arguments>
+                                    </sys:DateTime>
+                                </DatePicker.MaximumDate>
+                            </DatePicker>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Genero *" TextColor="Black"></Label>
+                            <Picker x:Name="pckGenero">
+                                <Picker.Items>
+                                    <x:String>Masculino</x:String>
+                                    <x:String>Femenino</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Fecha de nacimiento *" TextColor="Black"></Label>
+                            <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+                                <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+                                <DatePicker.MinimumDate>
+                                    <sys:DateTime x:FactoryMethod="Parse">
+                                        <x:Arguments>
+                                            <x:String>Jan 1 1900</x:String>
+                                        </x:Arguments>
+                                    </sys:DateTime>
+                                </DatePicker.MinimumDate>
+                                <DatePicker.MaximumDate>
+                                    <sys:DateTime x:FactoryMethod="Parse">
+                                        <x:Arguments>
+                                            <x:String>Dec 31 2050</x:String>
+                                        </x:Arguments>
+                                    </sys:DateTime>
+                                </DatePicker.MaximumDate>
+                            </DatePicker>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Edad" TextColor="Black"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryEdad"  AllowNull="false"  FormatString="años"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <StackLayout Style="{DynamicResource LabelsGreyBox}">
+                        <Label Text="Datos de ubicación"   TextColor="White" ></Label>
+                    </StackLayout>
+
+                    <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="0"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Dirección de residencia *" TextColor="Black"></Label>
+                            <Entry  x:Name="entryDireccion" Placeholder="Dirección de residencia"></Entry>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Teléfono de casa *" TextColor="Black"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryTelefono"  AllowNull="false"  FormatString="n"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="Número de celular *" TextColor="Black"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryCelular"  AllowNull="false"  FormatString="n"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"></StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

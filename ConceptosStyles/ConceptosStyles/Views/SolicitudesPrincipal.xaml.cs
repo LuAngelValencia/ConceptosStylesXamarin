@@ -2,9 +2,9 @@
 
 namespace ConceptosStyles.Views
 {
-    public partial class SolicitudesDatosBasicos : ContentPage
+    public partial class SolicitudesPrincipal : ContentPage
     {
-        public SolicitudesDatosBasicos()
+        public SolicitudesPrincipal()
         {
             InitializeComponent();
         }

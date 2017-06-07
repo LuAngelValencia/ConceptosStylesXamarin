@@ -20,7 +20,7 @@ namespace ConceptosStyles
             //NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
             //MainPage = new MainPage();
             //MainPage = new Dashboard();
-            NavigationService.NavigateAsync("NavigationPage/Simulador?title=SolicitudesDatosBasicos");
+            NavigationService.NavigateAsync("NavigationPage/SolicitudesPrincipal?title=SolicitudesDatosBasicos");
 
         }
 
@@ -34,9 +34,7 @@ namespace ConceptosStyles
             Container.RegisterTypeForNavigation<LayoutsExamples>();
             Container.RegisterTypeForNavigation<Listados>();
             Container.RegisterTypeForNavigation<ContextualMenu>();
-            Container.RegisterTypeForNavigation<SolicitudesDatosBasicos>();
-            Container.RegisterTypeForNavigation<SolicitudesDatosBasicos>();
-            Container.RegisterTypeForNavigation<SolicitudesDatosBasicos>();
+            Container.RegisterTypeForNavigation<SolicitudesPrincipal>();
         }
     }
 }
