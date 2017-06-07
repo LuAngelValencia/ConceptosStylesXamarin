@@ -120,8 +120,7 @@
                     
                     <sfgrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label x:Name="Cuota" Text="  # Cuota" TextColor="White" 
-                       BackgroundColor="#666666" YAlign="Center" FontSize="Default"  FontAttributes="Bold"/>
+                            <Label x:Name="Cuota" Text="  # Cuota" Style="{DynamicResource LabelsTHeader}"/>
                         </DataTemplate>
                     </sfgrid:GridTextColumn.HeaderTemplate>
                 </sfgrid:GridTextColumn>
@@ -155,8 +154,7 @@
                     
                     <sfgrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label x:Name="FechaVencimiento" Text="  Fecha de Vencimiento" TextColor="White" 
-                       BackgroundColor="#666666" YAlign="Center" FontSize="Default"  FontAttributes="Bold"/>
+                            <Label x:Name="FechaVencimiento" Text="  Fecha de Vencimiento" Style="{DynamicResource LabelsTHeader}"/>
                         </DataTemplate>
                     </sfgrid:GridTextColumn.HeaderTemplate>
                 </sfgrid:GridTextColumn>
@@ -190,8 +188,7 @@
 
                     <sfgrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label x:Name="ValorCapital" Text="  Valor Capital" TextColor="White" 
-                       BackgroundColor="#666666" YAlign="Center" FontSize="Default"  FontAttributes="Bold"/>
+                            <Label x:Name="ValorCapital" Text="  Valor Capital" Style="{DynamicResource LabelsTHeader}"/>
                         </DataTemplate>
                     </sfgrid:GridTextColumn.HeaderTemplate>
                 </sfgrid:GridTextColumn>
@@ -225,8 +222,7 @@
 
                     <sfgrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label x:Name="ValorFinanciacion" Text="  Valor Financiación" TextColor="White" 
-                       BackgroundColor="#666666" YAlign="Center" FontSize="Default"  FontAttributes="Bold"/>
+                            <Label x:Name="ValorFinanciacion" Text="  Valor Financiación" Style="{DynamicResource LabelsTHeader}"/>
                         </DataTemplate>
                     </sfgrid:GridTextColumn.HeaderTemplate>
                 </sfgrid:GridTextColumn>
@@ -260,8 +256,7 @@
 
                     <sfgrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label x:Name="ValorAval" Text="  Valor AVAL" TextColor="White" 
-                       BackgroundColor="#666666" YAlign="Center" FontSize="Default"  FontAttributes="Bold"/>
+                            <Label x:Name="ValorAval" Text="  Valor AVAL" Style="{DynamicResource LabelsTHeader}"/>
                         </DataTemplate>
                     </sfgrid:GridTextColumn.HeaderTemplate>
                 </sfgrid:GridTextColumn>
@@ -295,8 +290,7 @@
 
                     <sfgrid:GridTextColumn.HeaderTemplate>
                         <DataTemplate>
-                            <Label x:Name="ValorCuota" Text="  Valor de la cuota" TextColor="White" 
-                       BackgroundColor="#666666" YAlign="Center" FontSize="Default"  FontAttributes="Bold"/>
+                            <Label x:Name="ValorCuota" Text="  Valor de la cuota" Style="{DynamicResource LabelsTHeader}"/>
                         </DataTemplate>
                     </sfgrid:GridTextColumn.HeaderTemplate>
                     
