@@ -125,7 +125,7 @@
 
           <Style x:Key="LabelsTabbedMenu" TargetType="Label">
             <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="FontSize" Value="Medium" />
           </Style>
 
 

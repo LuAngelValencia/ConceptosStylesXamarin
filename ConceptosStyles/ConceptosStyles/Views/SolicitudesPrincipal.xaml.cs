@@ -7,6 +7,9 @@ namespace ConceptosStyles.Views
         public SolicitudesPrincipal()
         {
             InitializeComponent();
+
+            cvSolicitudesRefPersonales.BindingContext = BindingContext;
+
         }
     }
 }

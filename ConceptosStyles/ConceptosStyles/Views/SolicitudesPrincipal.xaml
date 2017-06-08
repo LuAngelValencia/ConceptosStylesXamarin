@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             xmlns:cvs="clr-namespace:ConceptosStyles.ContentView;assembly=ConceptosStyles"
+             xmlns:cvs="clr-namespace:ConceptosStyles.ContentView;assembly=ConceptosStyles"             
              x:Class="ConceptosStyles.Views.SolicitudesPrincipal">
     <StackLayout Padding="30,20,30,20" HorizontalOptions="FillAndExpand">
         <Frame Padding="0" Margin="0,0,0,15">
@@ -45,7 +45,8 @@
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
             <Label Text="DATOS BASICOS" Style="{DynamicResource LabelsTabbedMenuActivo}"></Label>
             <Label Text="DATOS COMPLEMENTARIOS" Style="{DynamicResource LabelsTabbedMenu}"></Label>
-            <Label Text="REFERENCIAS" Style="{DynamicResource LabelsTabbedMenu}"></Label>
+            <Label Text="LABORALES" Style="{DynamicResource LabelsTabbedMenu}"></Label>
+            <Label Text="PERSONALES" Style="{DynamicResource LabelsTabbedMenu}"></Label>
             <Label Text="DOCUMENTOS ADICIONALES" Style="{DynamicResource LabelsTabbedMenu}"></Label>
         </StackLayout>
         <BoxView Color="#054F9D" HorizontalOptions="FillAndExpand" HeightRequest="1"  Margin="0,0,0,15"/>
@@ -59,10 +60,14 @@
         <cvs:SolicitudesDatosComplementariosContentView></cvs:SolicitudesDatosComplementariosContentView>-->
 
 
-        <!--Datos Referencias-->
+        <!--Datos Referencias Laborales-->
         
-         <cvs:SolicitudesReferenciasLaboralesContentView></cvs:SolicitudesReferenciasLaboralesContentView>
-       
+        <!--<cvs:SolicitudesReferenciasLaboralesContentView></cvs:SolicitudesReferenciasLaboralesContentView>-->
+
+
+        <!--Datos Referencias Personales-->
+
+        <cvs:SolicitudesReferenciasPersonalesContentView x:Name="cvSolicitudesRefPersonales"></cvs:SolicitudesReferenciasPersonalesContentView>
 
 
         <!--Datos Documentos Adicionales-->

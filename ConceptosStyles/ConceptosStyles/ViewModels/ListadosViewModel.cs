@@ -30,28 +30,28 @@ namespace ConceptosStyles.ViewModels
         }
 
 
-        public bool IsVisible { get; private set; }
-        public void ShowContextualMenu(int sender)
-        {
+        //public bool IsVisible { get; private set; }
+        //public void ShowContextualMenu(int sender)
+        //{
             
-            BookInfo[sender].IsVisible = true;
+        //    BookInfo[sender].IsVisible = true;
 
-        }
+        //}
 
-        private bool _isBusy;
-        public bool IsBusy
-        {
-            get { return _isBusy; }
-            set { SetProperty(ref _isBusy, value); }
-        }
+        //private bool _isBusy;
+        //public bool IsBusy
+        //{
+        //    get { return _isBusy; }
+        //    set { SetProperty(ref _isBusy, value); }
+        //}
 
        
 
-        public void DisplayActionSheetAsync()
-        {
-            _pageDialogService.DisplayActionSheetAsync("Acciones", "Cancelar", null, "Aumento de Cupo", "Saldo", "Pago", "Histórico", "Solicitud", "Nuevo Crédito");
+        //public void DisplayActionSheetAsync()
+        //{
+        //    _pageDialogService.DisplayActionSheetAsync("Acciones", "Cancelar", null, "Aumento de Cupo", "Saldo", "Pago", "Histórico", "Solicitud", "Nuevo Crédito");
             
-        }
+        //}
 
 
         internal void GenerateBookInfo()
