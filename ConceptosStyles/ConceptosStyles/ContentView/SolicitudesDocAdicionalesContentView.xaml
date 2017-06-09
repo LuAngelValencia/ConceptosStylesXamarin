@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConceptosStyles.ContentView.SolicitudesDocAdicionalesContentView"
+             BackgroundColor="#F5F5F5">
+  <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0" Grid.Row="0" Margin="10,0,10,10" >
+                    <AbsoluteLayout Padding="20">
+                        <Image x:Name="fotoCliente" Source="ic_imageDefault.png" AbsoluteLayout.LayoutBounds="0.6,0,1,0.8" AbsoluteLayout.LayoutFlags="All"></Image>
+                        <Image Source="ic_camera.png"  AbsoluteLayout.LayoutBounds="1.1,1.1,0.2,0.2" AbsoluteLayout.LayoutFlags="All"></Image>
+                    </AbsoluteLayout>                    
+                </Frame>
+                <Label Grid.Column="0" Grid.Row="1" Text="FOTO DEL CLIENTE *" HorizontalOptions="Center"></Label>
+
+
+                <Frame Grid.Column="1" Grid.Row="0" Margin="10,0,10,10" >
+                    <AbsoluteLayout Padding="20">
+                        <Image x:Name="fotoClienteDelantera" Source="ic_imageDefault.png" AbsoluteLayout.LayoutBounds="0.6,0,1,0.8" AbsoluteLayout.LayoutFlags="All"></Image>
+                        <Image Source="ic_camera.png" AbsoluteLayout.LayoutBounds="1.1,1.1,0.2,0.2" AbsoluteLayout.LayoutFlags="All"></Image>
+                    </AbsoluteLayout>                    
+                </Frame>
+                <Label Grid.Column="1" Grid.Row="1" Text="CEDULA Foto parte delantera *" HorizontalOptions="Center"></Label>
+
+
+                <Frame Grid.Column="2" Grid.Row="0" Margin="10,0,10,10" >
+                    <AbsoluteLayout Padding="20">
+                        <Image x:Name="fotoClienteTrasera" Source="ic_imageDefault.png" AbsoluteLayout.LayoutBounds="0.6,0,1,0.8" AbsoluteLayout.LayoutFlags="All"></Image>
+                        <Image Source="ic_camera.png" AbsoluteLayout.LayoutBounds="1.1,1.1,0.2,0.2" AbsoluteLayout.LayoutFlags="All"></Image>
+                    </AbsoluteLayout>                    
+                </Frame>
+                <Label Grid.Column="2" Grid.Row="1" Text="CEDULA Foto parte trasera *" HorizontalOptions="Center"></Label>
+
+                <StackLayout Grid.Column="3" Grid.RowSpan="1">
+                    <AbsoluteLayout>
+                        <Label Text="AGREGAR MAS FOTOS " TextColor="#FFFC6200"></Label>
+                        <Image Source="ic_plus.png" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" HorizontalOptions="End"></Image>
+                    </AbsoluteLayout>
+                    
+                </StackLayout>
+                
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

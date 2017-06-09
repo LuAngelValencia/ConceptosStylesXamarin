@@ -13,7 +13,7 @@
                         <Label Text="Datos personales"   TextColor="White" ></Label>
                     </StackLayout>
                     <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,15">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                             <Label Text="Fecha de expedición cédula *" TextColor="Black"></Label>
                             <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
@@ -82,7 +82,7 @@
                     </StackLayout>
 
                     <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="0"/>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,15">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                             <Label Text="Dirección de residencia *" TextColor="Black"></Label>
                             <Entry  x:Name="entryDireccion" Placeholder="Dirección de residencia"></Entry>

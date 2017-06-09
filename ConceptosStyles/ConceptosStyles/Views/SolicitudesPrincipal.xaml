@@ -43,37 +43,59 @@
 
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Label Text="DATOS BASICOS" Style="{DynamicResource LabelsTabbedMenuActivo}"></Label>
-            <Label Text="DATOS COMPLEMENTARIOS" Style="{DynamicResource LabelsTabbedMenu}"></Label>
-            <Label Text="LABORALES" Style="{DynamicResource LabelsTabbedMenu}"></Label>
-            <Label Text="PERSONALES" Style="{DynamicResource LabelsTabbedMenu}"></Label>
-            <Label Text="DOCUMENTOS ADICIONALES" Style="{DynamicResource LabelsTabbedMenu}"></Label>
+            <Label Text="DATOS BASICOS" Style="{DynamicResource LabelsTabbedMenuActivo}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowDatosBasicos"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            <Label Text="DATOS COMPLEMENTARIOS" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowDatosComplementarios"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            <Label Text="LABORALES" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowRefLaborales"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            <Label Text="PERSONALES" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowRefPersonales"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            <Label Text="DOCUMENTOS ADICIONALES" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowDocsAdicionales"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
         <BoxView Color="#054F9D" HorizontalOptions="FillAndExpand" HeightRequest="1"  Margin="0,0,0,15"/>
 
         
         <!--Datos Básicos-->
-        <!--<cvs:SolicitudesDatosBasicosContentView></cvs:SolicitudesDatosBasicosContentView>
+        <cvs:SolicitudesDatosBasicosContentView x:Name="cvSolicitudesDatosBasicos" IsVisible="True"></cvs:SolicitudesDatosBasicosContentView>
 
 
-        --><!--Datos Complementarios--><!--
-        <cvs:SolicitudesDatosComplementariosContentView></cvs:SolicitudesDatosComplementariosContentView>-->
+        <!--Datos Complementarios-->
+        <cvs:SolicitudesDatosComplementariosContentView x:Name="cvSolicitudesDatosComplementarios" IsVisible="False"></cvs:SolicitudesDatosComplementariosContentView>
 
 
         <!--Datos Referencias Laborales-->
-        
-        <!--<cvs:SolicitudesReferenciasLaboralesContentView></cvs:SolicitudesReferenciasLaboralesContentView>-->
+
+        <cvs:SolicitudesReferenciasLaboralesContentView x:Name="cvSolicitudesRefLaborales" IsVisible="False"></cvs:SolicitudesReferenciasLaboralesContentView>
 
 
         <!--Datos Referencias Personales-->
 
-        <cvs:SolicitudesReferenciasPersonalesContentView x:Name="cvSolicitudesRefPersonales"></cvs:SolicitudesReferenciasPersonalesContentView>
+        <cvs:SolicitudesReferenciasPersonalesContentView x:Name="cvSolicitudesRefPersonales" IsVisible="False"></cvs:SolicitudesReferenciasPersonalesContentView>
 
 
         <!--Datos Documentos Adicionales-->
-        <ContentView>
-
-        </ContentView>
+        <cvs:SolicitudesDocAdicionalesContentView x:Name="cvSolicitudesDocAdicionales" IsVisible="False"></cvs:SolicitudesDocAdicionalesContentView>
         
         
     </StackLayout>
