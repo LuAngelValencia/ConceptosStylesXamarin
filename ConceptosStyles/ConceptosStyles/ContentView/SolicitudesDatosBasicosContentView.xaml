@@ -10,12 +10,12 @@
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <StackLayout  Style="{DynamicResource LabelsGreyBox}">
-                        <Label Text="Datos personales"   TextColor="White" ></Label>
+                        <Label Text="Datos personales"   TextColor="White" Style="{DynamicResource SolicitudesLabel}"></Label>
                     </StackLayout>
-                    <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+                    <BoxView Style="{DynamicResource HorizontalSeparator}"/>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,15">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Fecha de expedición cédula *" TextColor="Black"></Label>
+                            <Label Text="Fecha de expedición cédula *" Style="{DynamicResource SolicitudesLabel}"></Label>
                             <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
                                 <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
                                 <DatePicker.MinimumDate>
@@ -36,7 +36,7 @@
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Genero *" TextColor="Black"></Label>
+                            <Label Text="Genero *" Style="{DynamicResource SolicitudesLabel}"></Label>
                             <Picker x:Name="pckGenero">
                                 <Picker.Items>
                                     <x:String>Masculino</x:String>
@@ -48,7 +48,7 @@
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Fecha de nacimiento *" TextColor="Black"></Label>
+                            <Label Text="Fecha de nacimiento *" Style="{DynamicResource SolicitudesLabel}"></Label>
                             <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
                                 <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
                                 <DatePicker.MinimumDate>
@@ -69,7 +69,7 @@
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Edad" TextColor="Black"></Label>
+                            <Label Text="Edad" Style="{DynamicResource SolicitudesLabel}"></Label>
                             <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryEdad"  AllowNull="false"  FormatString="años"/>
                         </StackLayout>
                     </StackLayout>
@@ -78,25 +78,29 @@
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <StackLayout Style="{DynamicResource LabelsGreyBox}">
-                        <Label Text="Datos de ubicación"   TextColor="White" ></Label>
+                        <Label Text="Datos de ubicación"   Style="{DynamicResource SolicitudesLabel}" TextColor="White"></Label>
                     </StackLayout>
 
-                    <BoxView Color="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="0"/>
+                    <BoxView Style="{DynamicResource HorizontalSeparator}"/>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,15">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Dirección de residencia *" TextColor="Black"></Label>
-                            <Entry  x:Name="entryDireccion" Placeholder="Dirección de residencia"></Entry>
+                            <Label Text="Dirección de residencia *" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <Label  x:Name="entryDireccion" Text="Dirección de residencia">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="DireccionPopUp"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
                         </StackLayout>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Teléfono de casa *" TextColor="Black"></Label>
+                            <Label Text="Teléfono de casa *" Style="{DynamicResource SolicitudesLabel}"></Label>
                             <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryTelefono"  AllowNull="false"  FormatString="n"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <Label Text="Número de celular *" TextColor="Black"></Label>
+                            <Label Text="Número de celular *" Style="{DynamicResource SolicitudesLabel}"></Label>
                             <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryCelular"  AllowNull="false"  FormatString="n"/>
                         </StackLayout>
                     </StackLayout>

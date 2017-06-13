@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ConceptosStyles.ContentView.DireccionContentView"
+             xmlns:animations="clr-namespace:ConceptosStyles.Animations;assembly=ConceptosStyles"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Animation>
+        <animations:UserAnimation/>
+    </pages:PopupPage.Animation>
+    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" Padding="20" Margin="0,60,0,0" >
+        <Frame>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,0,30,0">
+                        <Label Text="Departamento"></Label>
+                        <Picker>
+                            <x:String>Antioquia</x:String>
+                            <x:String>Caldas</x:String>
+                        </Picker>
+
+                        <Label Text="Barrio / Localidad"></Label>
+                        <Picker>
+                            <x:String>Manrique</x:String>
+                            <x:String>Poblado</x:String>
+                            <x:String>Robledo</x:String>
+                        </Picker>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <Label Text="Ciudad"></Label>
+                        <Picker>
+                            <x:String>Medellín</x:String>
+                            <x:String>Manizales</x:String>
+                        </Picker>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Dirección"></Label>
+                    <Entry x:Name="direccion"></Entry>
+                    <Entry x:Name="direccionResultado"></Entry>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+              
+    </StackLayout>
+</pages:PopupPage>

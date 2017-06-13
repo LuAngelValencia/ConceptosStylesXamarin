@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using ConceptosStyles.ContentView;
+using Xamarin.Forms;
 
 namespace ConceptosStyles.Views
 {
@@ -9,6 +10,7 @@ namespace ConceptosStyles.Views
             InitializeComponent();
 
             cvSolicitudesRefPersonales.BindingContext = BindingContext;
+            cvSolicitudesDatosBasicos.BindingContext = BindingContext;
         }
 
         private void ShowDatosBasicos(object sender, Xamarin.Forms.TappedEventArgs e)
@@ -78,5 +80,8 @@ namespace ConceptosStyles.Views
                 cvSolicitudesDatosBasicos.IsVisible = false;
             }
         }
+
+        
+
     }
 }

@@ -5,8 +5,7 @@
              xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:controls ="clr-namespace:XFShapeView;assembly=XFShapeView"
              xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
-             Style="{DynamicResource PrincipalBackground}"
-            >
+             Style="{DynamicResource PrincipalBackground}">
     <ContentView.Content>
         <Frame BackgroundColor="White" VerticalOptions="FillAndExpand">
             <Grid>
@@ -28,8 +27,7 @@
                                                 ItemSize="120"
                                                 AutoFitMode="None"
                                                 SelectionMode="Single"     
-                                                SelectionGesture="Tap"
-                                     >
+                                                SelectionGesture="Tap">
                         <sync:SfListView.ItemTemplate>
                             <DataTemplate>
                                 <Frame HorizontalOptions="FillAndExpand"  BackgroundColor="#004B9B" Margin="0,0,0,20" Padding="10,5,10,5">
@@ -49,14 +47,9 @@
                                         <Label Grid.Column="0"  Grid.Row="1" Text="{Binding ParentescoRef}" TextColor="White" FontSize="17"></Label>
                                         <Label Grid.Column="0"  Grid.Row="2" Text="{Binding CelularRef}" TextColor="White" FontSize="17"></Label>
 
-                                        <!--<Label Grid.Column="1"  Grid.RowSpan="3"  Text="X" TextColor="White" HorizontalTextAlignment="End"></Label>-->
-                                        <!--<Image Source="negadoCircle.png" Grid.RowSpan="3"></Image>-->
-                                        <controls:ShapeView ShapeType="Circle" BorderColor="Red"  BorderWidth="2"
-                                            HorizontalOptions="End" VerticalOptions="Start" 
-                                            WidthRequest="50" HeightRequest="50" Grid.Column="1"  Grid.RowSpan="3" >
-                                            <Label Text="X" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"></Label>
-                                        </controls:ShapeView>
                                         
+                                        <Image Source="negadoCircle.png" Grid.Column="1"  Grid.Row="0" WidthRequest="10" HeightRequest="10" TranslationX="8" TranslationY="-3"></Image>
+                                        <Label Grid.Column="1"  Grid.Row="0"  Text="X" TextColor="White" HorizontalTextAlignment="End"></Label>
                                     </Grid>
                                 </Frame>
                             </DataTemplate>
@@ -65,44 +58,53 @@
                     </sync:SfListView>
                 </StackLayout>
 
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0">
+                    <StackLayout  Style="{DynamicResource LabelsGreyBox}">
+                        <Label Text="Referencias Personales"   TextColor="White" Style="{DynamicResource SolicitudesLabel}"></Label>
+                    </StackLayout>
+                    <BoxView Style="{DynamicResource HorizontalSeparator}"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="0,0,10,0" >
+                            <Label Text="Nombres completos *" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <Entry Margin="0,0,0,15"></Entry>
+
+                            <Label Text="Dirección de residencia" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <Entry Margin="0,0,0,15"></Entry>
+
+                            <Label Text="Numero de celular" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryCelular"  AllowNull="false"  FormatString="n" Margin="0,0,0,15"/>
+
+                            <Label Text="Telefono empresa" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryTelefono"  AllowNull="false"  FormatString="n" Margin="0,0,0,110"/>
 
 
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="0,0,10,0" Grid.Column="1"  Grid.Row="0">
-                    <Label Text="Nombres completos *" FontSize="18"></Label>
-                    <Entry Margin="0,0,0,15"></Entry>
 
-                    <Label Text="Dirección de residencia" FontSize="18"></Label>
-                    <Entry Margin="0,0,0,15"></Entry>
 
-                    <Label Text="Numero de celular" FontSize="18"></Label>
-                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryCelular"  AllowNull="false"  FormatString="n" Margin="0,0,0,15"/>
+                        </StackLayout>
 
-                    <Label Text="Telefono empresa" FontSize="18"></Label>
-                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryTelefono"  AllowNull="false"  FormatString="n" Margin="0,0,0,110"/>
 
-                    
-                        
-                            
+
+
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+                            <Label Text="Apellidos completos *" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <Entry Margin="0,0,0,15"></Entry>
+
+                            <Label Text="Teléfono de casa *" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <Entry Margin="0,0,0,15"></Entry>
+
+                            <Label Text="Parentesco" Style="{DynamicResource SolicitudesLabel}"></Label>
+                            <Picker x:Name="pckParentesco" Margin="0,0,0,15">
+                                <Picker.Items>
+                                    <x:String>Abuelo</x:String>
+                                    <x:String>Padre</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
 
-
-
-
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Column="2"  Grid.Row="0">
-                    <Label Text="Apellidos completos *" FontSize="18"></Label>
-                    <Entry Margin="0,0,0,15"></Entry>
-
-                    <Label Text="Teléfono de casa *" FontSize="18"></Label>
-                    <Entry Margin="0,0,0,15"></Entry>
-
-                    <Label Text="Parentesco" FontSize="18"></Label>
-                    <Picker x:Name="pckParentesco" Margin="0,0,0,15">
-                        <Picker.Items>
-                            <x:String>Abuelo</x:String>
-                            <x:String>Padre</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
+                
             </Grid>
         </Frame>
     </ContentView.Content>

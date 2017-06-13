@@ -1,6 +1,7 @@
 ﻿using Prism.Unity;
 using ConceptosStyles.Views;
 using Xamarin.Forms;
+using ConceptosStyles.ContentView;
 
 namespace ConceptosStyles
 {
@@ -20,7 +21,7 @@ namespace ConceptosStyles
             //NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
             //MainPage = new MainPage();
             //MainPage = new Dashboard();
-            NavigationService.NavigateAsync("NavigationPage/SolicitudesPrincipal?title=SolicitudesDatosBasicos");
+            NavigationService.NavigateAsync("NavigationPage/Flipping?title=SolicitudesDatosBasicos");
 
         }
 
@@ -35,6 +36,8 @@ namespace ConceptosStyles
             Container.RegisterTypeForNavigation<Listados>();
             Container.RegisterTypeForNavigation<ContextualMenu>();
             Container.RegisterTypeForNavigation<SolicitudesPrincipal>();
+            Container.RegisterTypeForNavigation<DireccionContentView>();
+            Container.RegisterTypeForNavigation<Flipping>();
         }
     }
 }
