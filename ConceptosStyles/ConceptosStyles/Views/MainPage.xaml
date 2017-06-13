@@ -5,87 +5,64 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ConceptosStyles.Views.MainPage"
              xmlns:custom="clr-namespace:ConceptosStyles;assembly=ConceptosStyles"
+             xmlns:flipper="clr-namespace:ConceptosStyles.Animations;assembly=ConceptosStyles"
              BackgroundImage="fondoLogin.png">
 
-
-    <!--<ContentPage.Content>-->
-    <!--<AbsoluteLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-
-                <ContentView HorizontalOptions="CenterAndExpand">
-                    <Image Source="logo.png" HorizontalOptions="Center" />
-                </ContentView>
-
-                <Frame HorizontalOptions="Center">
-                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                        <Image Source="ic_user.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="5" TranslationY="33"/>
-                        <custom:LoginEntry Placeholder="Ingrese su correo" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
-                    </StackLayout>
-                </Frame>
-
-                <Frame HorizontalOptions="Center" Padding="0,0,0,15">
-                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                        <Image Source="ic_lock.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="5" TranslationY="33"/>
-                        <custom:LoginEntry Placeholder="Ingrese su clave de acceso" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
-                    </StackLayout>
-                </Frame>
-
-                <Frame HorizontalOptions="CenterAndExpand">
-                    <Button Style="{DynamicResource PrincipalActionButton}" Command="{Binding ClickCommand}" Text="INGRESAR AHORA">
-                    </Button>
-                </Frame>
-
-                <Frame HorizontalOptions="CenterAndExpand">
-                    <Label Style="{DynamicResource Link}" Text="¿Olvidó su contraseña?">
-                    </Label>
-                </Frame>
-
-                <Frame HorizontalOptions="CenterAndExpand">
-                    <Button BackgroundColor="Transparent" BorderWidth="0" BorderColor="Transparent" BorderRadius="0"  Text="MODO PRUEBAS" TextColor="White"></Button>
-                </Frame>
-
-            </StackLayout>
-            <ContentView x:Name="actIndBackground"
-                     BackgroundColor="#222222" Opacity="0.5"
-                     AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1"
-                     IsVisible="{Binding IsBusy}">
-            </ContentView>
-            <ActivityIndicator x:Name="actInd"
-                     AbsoluteLayout.LayoutFlags="PositionProportional"
-                     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-                     IsRunning="{Binding IsBusy}"
-                     IsVisible="{Binding IsBusy}" />
-        </AbsoluteLayout>-->
-
-
-
     <AbsoluteLayout>
-        
+
 
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
 
             <Image Source="logo.png" />
+            <Button Clicked="Button_Clicked"></Button>
 
-            <StackLayout>
-                <Image Source="ic_user.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="5" TranslationY="33"/>
-                <custom:LoginEntry Placeholder="Ingrese su correo" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
-            </StackLayout>
+            <flipper:ViewFlipper
+                 x:Name="flipperCtrl">
+                <flipper:ViewFlipper.FrontView>
+                    <StackLayout>
+                        <StackLayout>
+                            <Image Source="ic_solicitud.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="0" TranslationY="30" WidthRequest="40"/>
+                            <custom:LoginEntry Placeholder="Ingrese código de almacén" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Image Source="ic_pago.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="0" TranslationY="30" WidthRequest="40"/>
+                            <custom:LoginEntry Placeholder="Ingrese código de seguridad" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Button Style="{DynamicResource PrincipalActionButton}" Text="ACEPTAR" Clicked="Button_Clicked">
+                            </Button>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </flipper:ViewFlipper.FrontView>
+                <flipper:ViewFlipper.BackView>
+                    <StackLayout>
+                        <StackLayout>
+                            <Image Source="ic_user.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="5" TranslationY="33"/>
+                            <custom:LoginEntry Placeholder="Ingrese su correo" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
+                        </StackLayout>
 
 
-            <StackLayout>
-                <Image Source="ic_lock.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="5" TranslationY="33"/>
-                <custom:LoginEntry Placeholder="Ingrese su clave de acceso" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
-            </StackLayout>
+                        <StackLayout>
+                            <Image Source="ic_lock.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="5" TranslationY="33"/>
+                            <custom:LoginEntry Placeholder="Ingrese su clave de acceso" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
+                        </StackLayout>
 
-            <StackLayout>
-                <Button Style="{DynamicResource PrincipalActionButton}" Command="{Binding ClickCommand}" Text="INGRESAR AHORA">
-                </Button>
+                        <StackLayout>
+                            <Button Style="{DynamicResource PrincipalActionButton}" Command="{Binding ClickCommand}" Text="INGRESAR AHORA">
+                            </Button>
 
-                <Button BackgroundColor="Transparent" BorderWidth="0" BorderColor="Transparent" BorderRadius="0"  Text="¿Olvidó su contraseña?" TextColor="White"></Button>
+                            <Button BackgroundColor="Transparent" BorderWidth="0" BorderColor="Transparent" BorderRadius="0"  Text="¿Olvidó su contraseña?" TextColor="White"></Button>
 
-                <Button BackgroundColor="Transparent" BorderWidth="0" BorderColor="Transparent" BorderRadius="0"  Text="MODO PRUEBAS" TextColor="White"></Button>
-            </StackLayout> 
+                            <Button BackgroundColor="Transparent" BorderWidth="0" BorderColor="Transparent" BorderRadius="0"  Text="MODO PRUEBAS" TextColor="White"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </flipper:ViewFlipper.BackView>
+            </flipper:ViewFlipper>
+
+            
         </StackLayout>
 
         <ContentView x:Name="actIndBackground"                       
@@ -102,8 +79,6 @@
 
 
     </AbsoluteLayout>
-
-    <!--</ContentPage.Content>-->
 
 
 </ContentPage>

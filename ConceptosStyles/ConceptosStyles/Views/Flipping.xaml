@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="ConceptosStyles.Views.Flipping">
+             x:Class="ConceptosStyles.Views.Flipping"
+             xmlns:flipper="clr-namespace:ConceptosStyles.Animations;assembly=ConceptosStyles">
 
-    <!--<flipper:ViewFlipper
+    <flipper:ViewFlipper
   BackgroundColor="White">
         <flipper:ViewFlipper.FrontView>
             <Label
@@ -18,6 +19,6 @@
       Source="icon.png" 
       Aspect="Fill" />
         </flipper:ViewFlipper.BackView>
-    </flipper:ViewFlipper>-->
+    </flipper:ViewFlipper>
 
 </ContentPage>

@@ -8,8 +8,6 @@ using Xamarin.Forms;
 namespace ConceptosStyles.Animations
 {
 
-    namespace ViewFlipper.FormsPlugin.Abstractions
-    {
         /// <summary>
         /// Flips two Views around X or Y axis
         /// </summary>
@@ -124,14 +122,14 @@ namespace ConceptosStyles.Animations
             /// <summary>
             /// Performs the flip
             /// </summary>
-            private async void Flip()
+            public async void Flip()
             {
                 var animationDuration = (uint)Math.Round((double)this.AnimationDuration / 2);
 
-                if (this.FlipState == Abstractions.FlipState.Front)
+                if (this.FlipState == FlipState.Front)
                 {
                     // Perform half of the flip
-                    if (this.RotationDirection == Abstractions.RotationDirection.Horizontal)
+                    if (this.RotationDirection == RotationDirection.Horizontal)
                         await this.RotateYTo(90, animationDuration);
                     else
                         await this.RotateXTo(90, animationDuration);
@@ -140,7 +138,7 @@ namespace ConceptosStyles.Animations
                     this.Content = this.FrontView;
 
                     // Perform second half of the flip
-                    if (this.RotationDirection == Abstractions.RotationDirection.Horizontal)
+                    if (this.RotationDirection == RotationDirection.Horizontal)
                         await this.RotateYTo(0, animationDuration);
                     else
                         await this.RotateXTo(0, animationDuration);
@@ -148,7 +146,7 @@ namespace ConceptosStyles.Animations
                 else
                 {
                     // Perform half of the flip
-                    if (this.RotationDirection == Abstractions.RotationDirection.Horizontal)
+                    if (this.RotationDirection == RotationDirection.Horizontal)
                         await this.RotateYTo(90, animationDuration);
                     else
                         await this.RotateXTo(90, animationDuration);
@@ -157,7 +155,7 @@ namespace ConceptosStyles.Animations
                     this.Content = this.BackView;
 
                     // Perform second half of the flip
-                    if (this.RotationDirection == Abstractions.RotationDirection.Horizontal)
+                    if (this.RotationDirection == RotationDirection.Horizontal)
                         await this.RotateYTo(180, animationDuration);
                     else
                         await this.RotateXTo(180, animationDuration);
@@ -182,13 +180,13 @@ namespace ConceptosStyles.Animations
             /// <summary>
             /// When the <c>ViewFlipper</c> gets tapped
             /// </summary>
-            private void OnTapped()
+            public void OnTapped()
             {
                 if (!this.FlipOnTap) return;
 
-                this.FlipState = this.FlipState == Abstractions.FlipState.Front ?
-                    Abstractions.FlipState.Back :
-                    Abstractions.FlipState.Front;
+                this.FlipState = this.FlipState == FlipState.Front ?
+                    FlipState.Back :
+                    FlipState.Front;
             }
             /// <summary>
             /// When the <c>FlipState</c> changed
@@ -276,4 +274,4 @@ namespace ConceptosStyles.Animations
         }
     }
 
-}
+
