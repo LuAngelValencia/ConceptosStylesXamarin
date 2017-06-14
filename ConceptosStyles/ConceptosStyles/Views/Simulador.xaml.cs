@@ -15,5 +15,19 @@ namespace ConceptosStyles.Views
             //dataGrid.SelectionMode = SelectionMode.Multiple;
             dataGrid.GridStyle = new CustomSelectionController();
         }
+
+        private void pckPlanes_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            var selectedValue = pckPlanes.Items[pckPlanes.SelectedIndex];
+            if(selectedValue == "Especiales")
+            {
+                NormalesPicked.IsVisible = false;
+                EspecialesPicked.IsVisible = true;
+            } else
+            {
+                NormalesPicked.IsVisible = true;
+                EspecialesPicked.IsVisible = false;
+            }
+        }
     }
 }

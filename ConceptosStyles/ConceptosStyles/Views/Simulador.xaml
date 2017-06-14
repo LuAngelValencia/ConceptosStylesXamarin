@@ -25,7 +25,7 @@
 
             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="0,0,50,0" >
                 <Label Text = "Planes" Style="{DynamicResource LabelsForm}" HorizontalOptions="Start"/>
-                <Picker x:Name="pckPlanes" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand" WidthRequest="300">
+                <Picker x:Name="pckPlanes" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand" WidthRequest="300" SelectedIndexChanged="pckPlanes_SelectedIndexChanged" Title="Seleccione un plan">
                     <Picker.Items>
                         <x:String>Normales</x:String>
                         <x:String>Especiales</x:String>
@@ -35,39 +35,55 @@
 
             <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" >
                 <Label Text = "Total a pagar" Style="{DynamicResource LabelsForm}" HorizontalOptions="StartAndExpand" />
-                <numeric:SfNumericTextBox MaximumNumberDecimalDigits="2" x:Name="entryTotalPagar"  AllowNull="false" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FormatString="c" Value="1000" WidthRequest="200" />
+                <numeric:SfNumericTextBox MaximumNumberDecimalDigits="2" x:Name="entryTotalPagar"  AllowNull="false" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FormatString="c" Value="0" WidthRequest="200" IsEnabled="false"/>
              </StackLayout>
          </StackLayout>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,50" >
 
-            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" >
-                <Label Text = "Meses del crédito" Style="{DynamicResource LabelsForm}" HorizontalOptions="StartAndExpand"/>
-                <Picker x:Name="pckMesesCredito" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand"  WidthRequest="300">
-                    <Picker.Items>
-                        <x:String>1</x:String>
-                        <x:String>2</x:String>
-                        <x:String>3</x:String>
-                        <x:String>4</x:String>
-                    </Picker.Items>
-                </Picker>
+            <StackLayout  x:Name="NormalesPicked" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" >
+                    <Label Text = "Meses del crédito" Style="{DynamicResource LabelsForm}" HorizontalOptions="StartAndExpand"/>
+                    <Picker x:Name="pckMesesCredito" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand"  WidthRequest="300" Title="Seleccione cantidad de meses">
+                        <Picker.Items>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="0,0,50,0" >
+                    <Label Text = "Frecuencia del pago" Style="{DynamicResource LabelsForm}" HorizontalOptions="Start"/>
+                    <Picker x:Name="pckFrecuenciaPago" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand"  WidthRequest="300" Title="Seleccione la frecuencia">
+                        <Picker.Items>
+                            <x:String>Quincenal</x:String>
+                            <x:String>Mensual</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" >
+                    <Label Style="{DynamicResource LabelsForm}" Text="¿Cuota inicial?" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    <Switch HorizontalOptions="Center" ></Switch>
+                </StackLayout>
             </StackLayout>
 
-            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="0,0,50,0" >
-                <Label Text = "Frecuencia del pago" Style="{DynamicResource LabelsForm}" HorizontalOptions="Start"/>
-                <Picker x:Name="pckFrecuenciaPago" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand"  WidthRequest="300">
-                    <Picker.Items>
-                        <x:String>Quincenal</x:String>
-                        <x:String>Mensual</x:String>
-                    </Picker.Items>
-                </Picker>
+            <StackLayout  x:Name="EspecialesPicked" Orientation="Horizontal" HorizontalOptions="FillAndExpand" IsVisible="False">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" >
+                    <Label Text = "Planes Especiales" Style="{DynamicResource LabelsForm}" HorizontalOptions="StartAndExpand"/>
+                    <Picker x:Name="pckPlanEspeciales" ItemsSource="{Binding SimuladorModel}" ItemDisplayBinding="{Binding PlanesEspeciales}" HorizontalOptions="FillAndExpand"  WidthRequest="300">
+                        <!--<Picker.Items>
+                            <x:String>Plan 1</x:String>
+                            <x:String>Plan 2</x:String>
+                            <x:String>Plan 3</x:String>
+                            <x:String>Plan 4</x:String>
+                        </Picker.Items>-->
+                    </Picker>
+                </StackLayout>
+                
             </StackLayout>
-
-            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" >
-                <Label Style="{DynamicResource LabelsForm}" Text="¿Cuota inicial?" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
-                <Switch HorizontalOptions="Center" ></Switch>
-            </StackLayout>
-
 
         </StackLayout>
 
@@ -78,7 +94,7 @@
                            ColumnSizer="Star"
                            VerticalOverScrollMode="None"
                            ItemsSource="{Binding OrdersInfo}"
-                           HorizontalOptions="StartAndExpand"
+                           HorizontalOptions="FillAndExpand"
                            SelectionMode="Single"
                            GridStyle="{StaticResource CustomSelectionController}">
 
@@ -93,7 +109,7 @@
 
                 <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
                                        HeaderText="# CUOTA"
-                                       HeaderTextAlignment="Start"
+                                       HeaderTextAlignment="Center"
                                        LineBreakMode="TailTruncation"
                                        MappingName="Cuota"
                                        TextAlignment="End"

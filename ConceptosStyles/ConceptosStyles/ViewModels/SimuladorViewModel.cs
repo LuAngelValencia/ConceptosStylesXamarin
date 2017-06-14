@@ -13,6 +13,7 @@ namespace ConceptosStyles.ViewModels
         public SimuladorViewModel()
         {
             SetRowstoGenerate(5);
+            GenerarPlanesEspeciales();
         }      
 
         #region ItemsSource
@@ -50,6 +51,25 @@ namespace ConceptosStyles.ViewModels
                 int val = i + random.Next(100, 150);
                 this.OrdersInfo.Insert(0, order.RefreshItemsource(val));
             }
-        }        
+        }
+
+
+        private ObservableCollection<SimuladorModel> simuladorModel;
+        public ObservableCollection<SimuladorModel> SimuladorModel
+        {
+            get { return simuladorModel; }
+            set { this.simuladorModel = value; RaisePropertyChanged("SimuladorModel"); }
+        }
+
+        internal void GenerarPlanesEspeciales()
+        {
+            simuladorModel = new ObservableCollection<SimuladorModel>();
+            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan1" }); 
+            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan2" }); 
+            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan3" }); 
+            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan4" }); 
+            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan5" }); 
+            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan6" });
+        }
     }
 }
