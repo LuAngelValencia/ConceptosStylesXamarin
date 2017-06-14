@@ -21,12 +21,12 @@
                 <flipper:ViewFlipper.FrontView>
                     <StackLayout>
                         <StackLayout>
-                            <Image Source="ic_solicitud.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="0" TranslationY="30" WidthRequest="40"/>
+                            <Image Source="ic_store.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="10" TranslationY="25" WidthRequest="20"/>
                             <custom:LoginEntry Placeholder="Ingrese código de almacén" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
                         </StackLayout>
 
                         <StackLayout>
-                            <Image Source="ic_pago.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="0" TranslationY="30" WidthRequest="40"/>
+                            <Image Source="ic_token.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="10" TranslationY="25" WidthRequest="20"/>
                             <custom:LoginEntry Placeholder="Ingrese código de seguridad" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
                         </StackLayout>
 
