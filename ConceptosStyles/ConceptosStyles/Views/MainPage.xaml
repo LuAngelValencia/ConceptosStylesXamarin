@@ -19,20 +19,21 @@
             <flipper:ViewFlipper
                  x:Name="flipperCtrl">
                 <flipper:ViewFlipper.FrontView>
-                    <StackLayout>
+                    <StackLayout Margin="0,20,0,0">
                         <StackLayout>
-                            <Image Source="ic_store.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="10" TranslationY="25" WidthRequest="20"/>
+                            <Image Source="ic_store.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="10" TranslationY="25" WidthRequest="15"/>
                             <custom:LoginEntry Placeholder="Ingrese código de almacén" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
                         </StackLayout>
 
                         <StackLayout>
-                            <Image Source="ic_token.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="10" TranslationY="25" WidthRequest="20"/>
+                            <Image Source="ic_token.png"  HorizontalOptions="Start" VerticalOptions="End" TranslationX="10" TranslationY="25" WidthRequest="15"/>
                             <custom:LoginEntry Placeholder="Ingrese código de seguridad" Style="{DynamicResource EntriesForm}" HeightRequest="35"/>
                         </StackLayout>
 
                         <StackLayout>
                             <Button Style="{DynamicResource PrincipalActionButton}" Text="ACEPTAR" Clicked="Button_Clicked">
                             </Button>
+
                         </StackLayout>
                         
                     </StackLayout>
