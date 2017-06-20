@@ -20,11 +20,7 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,15">
                             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                                 <Label Text="Estado civil *" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                <Picker x:Name="pckCivil">
-                                    <Picker.Items>
-                                        <x:String>Casado</x:String>
-                                        <x:String>Viudo</x:String>
-                                    </Picker.Items>
+                                <Picker x:Name="pckCivil" ItemsSource="{Binding EstadoCivil}" ItemDisplayBinding="{Binding EstadoCivilRefCom}">
                                 </Picker>
                             </StackLayout>
 
@@ -37,11 +33,7 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                                 <Label Text="Tipo de vivienda *" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                <Picker x:Name="pckTipoVivienda">
-                                    <Picker.Items>
-                                        <x:String>Arriendo</x:String>
-                                        <x:String>Propia</x:String>
-                                    </Picker.Items>
+                                <Picker x:Name="pckTipoVivienda" ItemsSource="{Binding TipoVivienda}" ItemDisplayBinding="{Binding TipoViviendaRefCom}">
                                 </Picker>
                             </StackLayout>
                         </StackLayout>
@@ -54,8 +46,8 @@
                                 <Label Text="Otro teléfono" Style="{DynamicResource SolicitudesLabel}"></Label>
                                 <Picker x:Name="pckOtroTelefono">
                                     <Picker.Items>
-                                        <x:String>Trabajo</x:String>
-                                        <x:String>Vivienda</x:String>
+                                        <x:String>Fijo</x:String>
+                                        <x:String>Celular</x:String>
                                     </Picker.Items>
                                 </Picker>
                             </StackLayout>

@@ -25,11 +25,7 @@
 
             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="0,0,50,0" >
                 <Label Text = "Planes" Style="{DynamicResource LabelsForm}" HorizontalOptions="Start"/>
-                <Picker x:Name="pckPlanes" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand" WidthRequest="300" SelectedIndexChanged="pckPlanes_SelectedIndexChanged" Title="Seleccione un plan">
-                    <Picker.Items>
-                        <x:String>Normales</x:String>
-                        <x:String>Especiales</x:String>
-                    </Picker.Items>
+                <Picker x:Name="pckPlanes" ItemsSource="{Binding TipoPlanes}" ItemDisplayBinding="{Binding Planes}" HorizontalOptions="FillAndExpand" WidthRequest="300" SelectedIndexChanged="pckPlanes_SelectedIndexChanged" Title="Seleccione un plan">
                 </Picker>
              </StackLayout>
 
@@ -56,11 +52,7 @@
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="0,0,50,0" >
                     <Label Text = "Frecuencia del pago" Style="{DynamicResource LabelsForm}" HorizontalOptions="Start"/>
-                    <Picker x:Name="pckFrecuenciaPago" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand"  WidthRequest="300" Title="Seleccione la frecuencia">
-                        <Picker.Items>
-                            <x:String>Quincenal</x:String>
-                            <x:String>Mensual</x:String>
-                        </Picker.Items>
+                    <Picker x:Name="pckFrecuenciaPago" ItemsSource="{Binding Frecuencias}" ItemDisplayBinding="{Binding Frecuencia}" HorizontalOptions="FillAndExpand"  WidthRequest="300" Title="Seleccione la frecuencia">
                     </Picker>
                 </StackLayout>
 
@@ -73,13 +65,7 @@
             <StackLayout  x:Name="EspecialesPicked" Orientation="Horizontal" HorizontalOptions="FillAndExpand" IsVisible="False">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" >
                     <Label Text = "Planes Especiales" Style="{DynamicResource LabelsForm}" HorizontalOptions="StartAndExpand"/>
-                    <Picker x:Name="pckPlanEspeciales" ItemsSource="{Binding SimuladorModel}" ItemDisplayBinding="{Binding PlanesEspeciales}" HorizontalOptions="FillAndExpand"  WidthRequest="300">
-                        <!--<Picker.Items>
-                            <x:String>Plan 1</x:String>
-                            <x:String>Plan 2</x:String>
-                            <x:String>Plan 3</x:String>
-                            <x:String>Plan 4</x:String>
-                        </Picker.Items>-->
+                    <Picker x:Name="pckPlanEspeciales" ItemsSource="{Binding PlanesEspeciales}" ItemDisplayBinding="{Binding PlanesEspeciales}" HorizontalOptions="FillAndExpand"  WidthRequest="300">
                     </Picker>
                 </StackLayout>
                 

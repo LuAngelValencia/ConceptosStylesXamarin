@@ -10,6 +10,7 @@ namespace ConceptosStyles.Views
             InitializeComponent();
 
             cvSolicitudesRefPersonales.BindingContext = BindingContext;
+            cvSolicitudesRefLaborales.BindingContext = BindingContext;
             cvSolicitudesDatosBasicos.BindingContext = BindingContext;
         }
 

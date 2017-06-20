@@ -85,7 +85,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,0,0,15">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                             <Label Text="Dirección de residencia *" Style="{DynamicResource SolicitudesLabel}"></Label>
-                            <Label  x:Name="entryDireccion" Text="Dirección de residencia">
+                            <Label  x:Name="entryDireccion" Text="Dirección de residencia" HeightRequest="45">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="DireccionPopUp"></TapGestureRecognizer>
                                 </Label.GestureRecognizers>

@@ -14,6 +14,8 @@ namespace ConceptosStyles.ViewModels
         {
             SetRowstoGenerate(5);
             GenerarPlanesEspeciales();
+            GenerarPlanes();
+            GenerarFrecuencias();
         }      
 
         #region ItemsSource
@@ -54,22 +56,51 @@ namespace ConceptosStyles.ViewModels
         }
 
 
-        private ObservableCollection<SimuladorModel> simuladorModel;
-        public ObservableCollection<SimuladorModel> SimuladorModel
+        private ObservableCollection<SimuladorModel> tipoPlanes;
+        public ObservableCollection<SimuladorModel> TipoPlanes
         {
-            get { return simuladorModel; }
-            set { this.simuladorModel = value; RaisePropertyChanged("SimuladorModel"); }
+            get { return tipoPlanes; }
+            set { this.tipoPlanes = value; RaisePropertyChanged("TipoPlanes"); }
+        }
+
+        private ObservableCollection<SimuladorModel> planesEspeciales;
+        public ObservableCollection<SimuladorModel> PlanesEspeciales
+        {
+            get { return planesEspeciales; }
+            set { this.planesEspeciales = value; RaisePropertyChanged("PlanesEspeciales"); }
+        }
+
+        private ObservableCollection<SimuladorModel> frecuencias;
+        public ObservableCollection<SimuladorModel> Frecuencias
+        {
+            get { return frecuencias; }
+            set { this.frecuencias = value; RaisePropertyChanged("Frecuencias"); }
         }
 
         internal void GenerarPlanesEspeciales()
         {
-            simuladorModel = new ObservableCollection<SimuladorModel>();
-            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan1" }); 
-            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan2" }); 
-            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan3" }); 
-            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan4" }); 
-            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan5" }); 
-            simuladorModel.Add(new SimuladorModel() { PlanesEspeciales = "Plan6" });
+            planesEspeciales = new ObservableCollection<SimuladorModel>();
+            planesEspeciales.Add(new SimuladorModel() { PlanesEspeciales = "Plan1" }); 
+            planesEspeciales.Add(new SimuladorModel() { PlanesEspeciales = "Plan2" }); 
+            planesEspeciales.Add(new SimuladorModel() { PlanesEspeciales = "Plan3" }); 
+            planesEspeciales.Add(new SimuladorModel() { PlanesEspeciales = "Plan4" }); 
+            planesEspeciales.Add(new SimuladorModel() { PlanesEspeciales = "Plan5" }); 
+            planesEspeciales.Add(new SimuladorModel() { PlanesEspeciales = "Plan6" });
+        }
+
+
+        internal void GenerarPlanes()
+        {
+            tipoPlanes = new ObservableCollection<SimuladorModel>();
+            tipoPlanes.Add(new SimuladorModel() { Planes = "Normales" });
+            tipoPlanes.Add(new SimuladorModel() { Planes = "Especiales" });
+        }
+
+        internal void GenerarFrecuencias()
+        {
+            frecuencias = new ObservableCollection<SimuladorModel>();
+            frecuencias.Add(new SimuladorModel() { Frecuencia = "Quincenal" });
+            frecuencias.Add(new SimuladorModel() { Frecuencia = "Mensual" });
         }
     }
 }

@@ -15,31 +15,18 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,0,30,0">
                         <Label Text="Departamento"></Label>
-                        <Picker>
-                            <Picker.Items>
-                                <x:String>Antioquia</x:String>
-                                <x:String>Caldas</x:String>
-                            </Picker.Items>
+                        <Picker x:Name="pckDepartamentos" ItemsSource="{Binding Departamentos}" ItemDisplayBinding="{Binding DepartamentoNombre}" SelectedIndexChanged="pckDepartamentos_SelectedIndexChanged">
                         </Picker>
 
                         <Label Text="Barrio / Localidad"></Label>
-                        <Picker>
-                            <Picker.Items>
-                                <x:String>Manrique</x:String>
-                                <x:String>Poblado</x:String>
-                                <x:String>Robledo</x:String>
-                            </Picker.Items>
+                        <Picker x:Name="pckBarrios" ItemsSource="{Binding BarriosFiltered, Mode=TwoWay}" SelectedIndexChanged="pckBarrios_SelectedIndexChanged" ItemDisplayBinding="{Binding BarrioNombre}">
                         </Picker>
 
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                         <Label Text="Ciudad"></Label>
-                        <Picker>
-                            <Picker.Items>
-                                <x:String>Medellín</x:String>
-                                <x:String>Manizales</x:String>
-                            </Picker.Items>
+                        <Picker x:Name="pckCiudades" ItemsSource="{Binding CiudadesFiltered, Mode=TwoWay}" ItemDisplayBinding="{Binding CiudadNombre}" SelectedIndexChanged="pckCiudades_SelectedIndexChanged">
                         </Picker>
                     </StackLayout>
                 </StackLayout>

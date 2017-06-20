@@ -16,6 +16,12 @@ namespace ConceptosStyles.Models
         private string telefonoCasaRef;
         private string celularRef;
         private string telefonoEmpresaRef;
+        private string cargosRefLab;
+        private string ocupacionesRefLab;
+        private string ingresosRefLab;
+        private string estadoCivilRefCom;
+        private string tipoViviendaRefCom;
+        private string parentezcoRefPer;
 
 
         public string NombresRef
@@ -94,6 +100,65 @@ namespace ConceptosStyles.Models
             }
         }
 
+        public string CargosRefLab
+        {
+            get { return cargosRefLab; }
+            set
+            {
+                cargosRefLab = value;
+                OnPropertyChanged("CargosRefLab");
+            }
+        }
+
+        public string OcupacionesRefLab
+        {
+            get { return ocupacionesRefLab; }
+            set
+            {
+                ocupacionesRefLab = value;
+                OnPropertyChanged("OcupacionesRefLab");
+            }
+        }
+
+        public string IngresosRefLab
+        {
+            get { return ingresosRefLab; }
+            set
+            {
+                ingresosRefLab = value;
+                OnPropertyChanged("IngresosRefLab");
+            }
+        }
+
+        public string EstadoCivilRefCom
+        {
+            get { return estadoCivilRefCom; }
+            set
+            {
+                estadoCivilRefCom = value;
+                OnPropertyChanged("EstadoCivilRefCom");
+            }
+        }
+
+        public string TipoViviendaRefCom
+        {
+            get { return tipoViviendaRefCom; }
+            set
+            {
+                tipoViviendaRefCom = value;
+                OnPropertyChanged("TipoViviendaRefCom");
+            }
+        }
+
+        public string ParentezcoRefPer
+        {
+            get { return parentezcoRefPer; }
+            set
+            {
+                parentezcoRefPer = value;
+                OnPropertyChanged("ParentezcoRefPer");
+            }
+        }
 
         public string NombresApellidosRef { get { return NombresRef + " " + ApellidosRef; } }
 

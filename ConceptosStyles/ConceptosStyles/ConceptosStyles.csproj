@@ -59,6 +59,7 @@
     <Compile Include="DashboardButton.cs" />
     <Compile Include="LoginEntry.cs" />
     <Compile Include="Models\BookInfo.cs" />
+    <Compile Include="Models\DireccionModel.cs" />
     <Compile Include="Models\OrderInfo.cs" />
     <Compile Include="Models\OrderInfoRepository.cs" />
     <Compile Include="Models\ReferenciasModel.cs" />

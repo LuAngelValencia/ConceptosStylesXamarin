@@ -35,77 +35,65 @@
 
 
 
-                        <AbsoluteLayout HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,0.9,1" AbsoluteLayout.LayoutFlags="SizeProportional">
-                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                    <Label Text="Cargo" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                    <Picker x:Name="pckCargo">
-                                        <Picker.Items>
-                                            <x:String>Ingeniero</x:String>
-                                            <x:String>Doctor</x:String>
-                                        </Picker.Items>
-                                    </Picker>
-                                </StackLayout>
+                    <AbsoluteLayout HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,0.9,1" AbsoluteLayout.LayoutFlags="SizeProportional">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Cargo" Style="{DynamicResource SolicitudesLabel}"></Label>
+                                <Picker x:Name="pckCargo" ItemsSource="{Binding Cargos}" ItemDisplayBinding="{Binding CargosRefLab}">
 
-                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                    <Label Text="Salario" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                    <Picker x:Name="pckSalario">
-                                        <Picker.Items>
-                                            <x:String>1'000.000</x:String>
-                                            <x:String>10'000.000</x:String>
-                                        </Picker.Items>
-                                    </Picker>
-                                </StackLayout>
-
-                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                    <Label Text="Tiempo en la empresa" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryAnosTiempoEmpresa"  AllowNull="false"  FormatString="Años"/>
-                                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryMesesTiempoEmpresa"  AllowNull="false"  FormatString="Meses"/>
-                                </StackLayout>
-
+                                </Picker>
                             </StackLayout>
+
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Salario" Style="{DynamicResource SolicitudesLabel}"></Label>
+                                <Picker x:Name="pckSalario" ItemsSource="{Binding Ingresos}" ItemDisplayBinding="{Binding IngresosRefLab}">
+                                </Picker>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Tiempo en la empresa" Style="{DynamicResource SolicitudesLabel}"></Label>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryAnosTiempoEmpresa"  AllowNull="false"  FormatString="Años" Margin="0,0,10,0" HorizontalOptions="FillAndExpand"/>
+                                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryMesesTiempoEmpresa"  AllowNull="false"  FormatString="Meses" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </StackLayout>
                         <Label Text=".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." Style="{DynamicResource DotsSeparator}" AbsoluteLayout.LayoutBounds="2,.5,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional"></Label>
                     </AbsoluteLayout>
 
-                       
-                 
 
 
 
-                        <AbsoluteLayout HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,0.9,1" AbsoluteLayout.LayoutFlags="SizeProportional">
-                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                    <Label Text="Ocupación *" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                    <Picker x:Name="pckOcupacion">
-                                        <Picker.Items>
-                                            <x:String>Independiente</x:String>
-                                            <x:String>Desempleado</x:String>
-                                        </Picker.Items>
-                                    </Picker>
-                                </StackLayout>
 
-                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                    <Label Text="Ingresos mensuales *" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                    <Picker x:Name="pckIngresos">
-                                        <Picker.Items>
-                                            <x:String>Más de 1'000.000</x:String>
-                                            <x:String>Más de 10'.000.000</x:String>
-                                        </Picker.Items>
-                                    </Picker>
-                                </StackLayout>
 
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                        <Label Text="Teléfono celular" Style="{DynamicResource SolicitudesLabel}"></Label>
-                                        <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryCelular"  AllowNull="false"  FormatString="n"/>
-                                    </StackLayout>
+                    <AbsoluteLayout HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,0.9,1" AbsoluteLayout.LayoutFlags="SizeProportional">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Ocupación *" Style="{DynamicResource SolicitudesLabel}"></Label>
+                                <Picker x:Name="pckOcupacion" ItemsSource="{Binding Ocupaciones}" ItemDisplayBinding="{Binding OcupacionesRefLab}">
 
-                                </StackLayout>
+                                </Picker>
                             </StackLayout>
-                        </AbsoluteLayout>  
+
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Ingresos mensuales *" Style="{DynamicResource SolicitudesLabel}"></Label>
+                                <Picker x:Name="pckIngresos" ItemsSource="{Binding Ingresos, Mode=OneWay}" ItemDisplayBinding="{Binding IngresosRefLab}">
+                                </Picker>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Teléfono celular" Style="{DynamicResource SolicitudesLabel}"></Label>
+                                    <numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" x:Name="entryCelular"  AllowNull="false"  FormatString="n"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </AbsoluteLayout>
                 </StackLayout>
             </StackLayout>
-            
+
         </Frame>
     </ContentView.Content>
 </ContentView>
