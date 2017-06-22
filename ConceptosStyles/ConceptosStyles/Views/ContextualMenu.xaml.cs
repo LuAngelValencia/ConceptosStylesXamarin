@@ -30,5 +30,16 @@ namespace ConceptosStyles.Views
         {
             PopupNavigation.PopAsync();
         }
+
+        private  void OpenSolicitudes(object sender, Xamarin.Forms.TappedEventArgs e)
+        {
+            try
+            {
+                ViewModel.CargarSolicitudPrincipalPage();
+            } catch( Exception ex) {
+                throw ex;
+            }
+            
+        }
     }
 }

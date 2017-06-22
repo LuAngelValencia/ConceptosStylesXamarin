@@ -47,7 +47,11 @@
             <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand">
                 <StackLayout Spacing="20" Orientation="Horizontal" Margin="0,0,0,20">
                     <Image Source="ic_solicitud.png" ></Image>
-                    <Label Text="Solicitud" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
+                    <Label Text="Solicitud" Style="{DynamicResource LabelsLogosMenuContextual}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OpenSolicitudes" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                     <Image Source="ic_pago.png"></Image>
                     <Label Text="Pago" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
@@ -64,7 +68,11 @@
                     <Label Text="Aumento de Crédito" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
 
                     <Image Source="ic_cerrar.png"></Image>
-                    <Label Text="Cerrar" Style="{DynamicResource LabelsLogosMenuContextual}"></Label>
+                    <Label Text="Cerrar" Style="{DynamicResource LabelsLogosMenuContextual}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnClose"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
                 </StackLayout>
             </StackLayout>
         </Frame>

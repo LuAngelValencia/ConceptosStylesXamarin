@@ -1,10 +1,18 @@
 ﻿using ConceptosStyles.ContentView;
+using ConceptosStyles.Models;
+using ConceptosStyles.ViewModels;
+using System;
 using Xamarin.Forms;
 
 namespace ConceptosStyles.Views
 {
     public partial class SolicitudesPrincipal : ContentPage
     {
+        public SolicitudesPrincipalViewModel ViewModel
+        {
+            get { return (SolicitudesPrincipalViewModel)BindingContext; }
+        }
+
         public SolicitudesPrincipal()
         {
             InitializeComponent();
@@ -82,7 +90,9 @@ namespace ConceptosStyles.Views
             }
         }
 
-        
+
+       
+
 
     }
 }

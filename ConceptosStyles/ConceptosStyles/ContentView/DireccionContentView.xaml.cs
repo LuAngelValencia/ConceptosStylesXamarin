@@ -33,7 +33,7 @@ namespace ConceptosStyles.ContentView
                 var item = (DireccionModel)selectedItem.SelectedItem;
 
                 ViewModel.FiltrarBarrios(item.CiudadNombre);
-            }           
+            }
         }
 
         private void pckDepartamentos_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -45,9 +45,9 @@ namespace ConceptosStyles.ContentView
                 var item = (DireccionModel)selectedItem.SelectedItem;
 
                 ViewModel.FiltrarCiudades(item.DepartamentoNombre);
-            }            
+            }
 
-            if (ViewModel.BarriosFiltered != null )
+            if (ViewModel.BarriosFiltered != null)
             {
                 ViewModel.BarriosFiltered.Clear();
             }
@@ -55,7 +55,7 @@ namespace ConceptosStyles.ContentView
 
         private void pckBarrios_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            
+
         }
     }
 }

@@ -9,6 +9,7 @@ namespace ConceptosStyles.Models
 {
     public class ReferenciasModel : INotifyPropertyChanged
     {
+        private string codigoRef;
         private string nombresRef;
         private string apellidosRef;
         private string parentescoRef;
@@ -22,6 +23,19 @@ namespace ConceptosStyles.Models
         private string estadoCivilRefCom;
         private string tipoViviendaRefCom;
         private string parentezcoRefPer;
+        private string urlFotoDocAdi;
+
+        
+
+        public string CodigoRef
+        {
+            get { return codigoRef; }
+            set
+            {
+                codigoRef = value;
+                OnPropertyChanged("CodigoRef");
+            }
+        }
 
 
         public string NombresRef
@@ -157,6 +171,16 @@ namespace ConceptosStyles.Models
             {
                 parentezcoRefPer = value;
                 OnPropertyChanged("ParentezcoRefPer");
+            }
+        }
+
+        public string UrlFotoDocAdi
+        {
+            get { return urlFotoDocAdi; }
+            set
+            {
+                urlFotoDocAdi = value;
+                OnPropertyChanged("UrlFotoDocAdi");
             }
         }
 

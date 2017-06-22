@@ -2,6 +2,7 @@
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +59,19 @@ namespace ConceptosStyles.ViewModels
         public ContextualMenuViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
+        }
+
+        public  void CargarSolicitudPrincipalPage()
+        {
+            var navigationParams = new NavigationParameters();
+            navigationParams.Add("_nombreCliente", NombreCliente);
+            navigationParams.Add("_ccCliente", CcCliente);
+            navigationParams.Add("_estado", Estado);
+            navigationParams.Add("_nombreAsesor", NombreAsesor);
+            navigationParams.Add("_cupoCredito", CupoCredito);
+            navigationParams.Add("_montoDisponible", MontoDisponible);
+            _navigationService.NavigateAsync("SolicitudesPrincipal", navigationParams);
+            PopupNavigation.PopAsync();
         }
     }
 }

@@ -15,9 +15,18 @@ namespace ConceptosStyles.ContentView
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SolicitudesReferenciasPersonalesContentView : Xamarin.Forms.ContentView
     {
+        public SolicitudesPrincipalViewModel ViewModel
+        {
+            get
+            {
+                return (SolicitudesPrincipalViewModel)BindingContext;
+            }
+        }
+
         public SolicitudesReferenciasPersonalesContentView()
         {
             InitializeComponent();
+            BindingContext = new SolicitudesPrincipalViewModel();
         }
 
         private async void DireccionPopUp(object sender, Xamarin.Forms.TappedEventArgs e)
@@ -31,6 +40,8 @@ namespace ConceptosStyles.ContentView
             try
             {
                 var bookInfo = (ReferenciasModel)e.Parameter;
+                ViewModel.EliminarReferenciaPersonal(bookInfo);
+                
             }
             catch (Exception ex)
             {
@@ -46,15 +57,14 @@ namespace ConceptosStyles.ContentView
             try
             {
                 var bookInfo = (ReferenciasModel)e.Parameter;
-                //entryNombresApellidos.Text = bookInfo.NombresApellidosRef;
-                SolicitudesPrincipalViewModel ViewModelPrincipal = new SolicitudesPrincipalViewModel();
-                ViewModelPrincipal.CargarFormularioRefPersonal(bookInfo);                
+                ViewModel.CargarFormularioRefPersonal(bookInfo);
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        
+
     }
 }

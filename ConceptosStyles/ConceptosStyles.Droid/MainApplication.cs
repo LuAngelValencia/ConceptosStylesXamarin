@@ -4,6 +4,7 @@ using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Plugin.CurrentActivity;
+using Plugin.Media;
 
 namespace ConceptosStyles.Droid
 {
@@ -16,9 +17,10 @@ namespace ConceptosStyles.Droid
         {
         }
 
-        public override void OnCreate()
+        public override async void OnCreate()
         {
             base.OnCreate();
+            await CrossMedia.Current.Initialize();
             RegisterActivityLifecycleCallbacks(this);
             //A great place to initialize Xamarin.Insights and Dependency Services!
         }

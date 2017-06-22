@@ -4,21 +4,39 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ConceptosStyles.Views.Flipping"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:flipper="clr-namespace:ConceptosStyles.Animations;assembly=ConceptosStyles">
 
-    <flipper:ViewFlipper
-  BackgroundColor="White">
-        <flipper:ViewFlipper.FrontView>
-            <Label
-      XAlign="Center"
-      YAlign="Center"
-      Text="Tap to show image" />
-        </flipper:ViewFlipper.FrontView>
-        <flipper:ViewFlipper.BackView>
-            <Image 
-      Source="icon.png" 
-      Aspect="Fill" />
-        </flipper:ViewFlipper.BackView>
-    </flipper:ViewFlipper>
+    <sync:SfListView x:Name="refListView"
+                     DataSource="{Binding}"
+                                                ItemSize="120"
+                                                AutoFitMode="None"
+                     BackgroundColor="Aqua">
+        <sync:SfListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="Red">
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                        <Label Text="aaaaaaaaaaa"></Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
 
+        </sync:SfListView.ItemTemplate>
+    </sync:SfListView>
+
+    <!--<ScrollView>
+        <StackLayout>
+            <BoxView BackgroundColor="Red" HeightRequest="700" WidthRequest="150" />
+            <Entry />
+        </StackLayout>
+    </ScrollView>-->
 </ContentPage>

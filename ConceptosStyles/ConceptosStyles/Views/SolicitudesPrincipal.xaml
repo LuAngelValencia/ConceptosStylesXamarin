@@ -44,31 +44,31 @@
 
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Label Text="DATOS BASICOS" Style="{DynamicResource LabelsTabbedMenuActivo}">
+                <Label x:Name="lblDatosBasicos" Text="DATOS BASICOS" Style="{DynamicResource LabelsTabbedMenuActivo}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ShowDatosBasicos"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
 
-                <Label Text="DATOS COMPLEMENTARIOS" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label x:Name="lblDatosComplementarios" Text="DATOS COMPLEMENTARIOS" Style="{DynamicResource LabelsTabbedMenu}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ShowDatosComplementarios"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
 
-                <Label Text="LABORALES" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label x:Name="lblRefLaborales" Text="LABORALES" Style="{DynamicResource LabelsTabbedMenu}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ShowRefLaborales"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
 
-                <Label Text="PERSONALES" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label x:Name="lblRefPersonales" Text="PERSONALES" Style="{DynamicResource LabelsTabbedMenu}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ShowRefPersonales"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
 
-                <Label Text="DOCUMENTOS ADICIONALES" Style="{DynamicResource LabelsTabbedMenu}">
+                <Label x:Name="lblDocAdicionales" Text="DOCUMENTOS ADICIONALES" Style="{DynamicResource LabelsTabbedMenu}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ShowDocsAdicionales"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
