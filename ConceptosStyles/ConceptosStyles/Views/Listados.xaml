@@ -9,7 +9,7 @@
     <AbsoluteLayout>
 
             <sync:SfListView x:Name="listView"
-                    ItemSize="120"
+                    ItemSize="140"
                     ItemsSource="{Binding BookInfo}"
                     AutoFitMode="None"
                     SelectionMode="Single"     
@@ -21,17 +21,17 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <AbsoluteLayout>
-                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0" >
-                                        <Grid  HorizontalOptions="FillAndExpand">
+                                <AbsoluteLayout HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" AbsoluteLayout.LayoutBounds="0,0,1300,-1">
+                                    <Grid  HorizontalOptions="FillAndExpand">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="*" />
                                             </Grid.RowDefinitions>
 
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="0.40*" />
-                                                <ColumnDefinition Width="0.25*" />
                                                 <ColumnDefinition Width="0.35*" />
+                                                <ColumnDefinition Width="0.25*" />
+                                                <ColumnDefinition Width="0.38*" />
                                             </Grid.ColumnDefinitions>
 
                                             <Label Grid.Column="0"  Grid.Row="0"  Text="Nobre del cliente:" TextColor="#858585"></Label>
@@ -39,7 +39,7 @@
                                             <Label Grid.Column="2" Grid.Row="0" Text="Monto aprobado:" TextColor="#858585" ></Label>
                                         </Grid>
                                     </StackLayout>
-                                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="0,25,0,0">
                                         <Grid Padding="10" BackgroundColor="White" Margin="0,0,0,10">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="*" />

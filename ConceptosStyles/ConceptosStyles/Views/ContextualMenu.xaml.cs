@@ -17,7 +17,7 @@ namespace ConceptosStyles.Views
         public ContextualMenu(BookInfo bookInfo)
         {
             InitializeComponent();
-
+            CloseWhenBackgroundIsClicked = false;
             ViewModel.NombreCliente = bookInfo.NombreCliente;
             ViewModel.CcCliente = bookInfo.CcCliente;
             ViewModel.Estado = bookInfo.Estado;
