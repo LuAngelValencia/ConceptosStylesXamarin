@@ -59,7 +59,7 @@
 
                                             <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" TextColor="Black" FontAttributes="Bold" FontSize="16"></Label>
                                             <Label Grid.Column="1" Grid.Row="1" Text="{Binding CcCliente}" TextColor="Black"  FontSize="14"></Label>
-                                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Estado}" TextColor="Green"  FontAttributes="Bold" FontSize="15"></Label>
+                                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Estado}" Style="{DynamicResource EstadoListados}" TextColor="Green"></Label>
 
                                             <Label Grid.Column="2" Grid.Row="0" Text="{Binding NombreAsesor}" TextColor="Black"  FontSize="14"></Label>
                                             <Label Grid.Column="2" Grid.Row="1" Text="Teléfono: 987 6543" TextColor="Black"  FontSize="14"></Label>

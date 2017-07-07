@@ -21,7 +21,7 @@ namespace ConceptosStyles
             //NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
             //MainPage = new MainPage();
             //MainPage = new Dashboard();
-            NavigationService.NavigateAsync("NavigationPage/Simulador?title=SolicitudesDatosBasicos");
+            NavigationService.NavigateAsync("NavigationPage/Listados?title=SolicitudesDatosBasicos");
 
         }
 

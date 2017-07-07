@@ -193,6 +193,11 @@
             <Setter Property="TextColor" Value="Black"/>
           </Style>
 
+          <Style x:Key="EstadoListados" TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+          </Style>
+          
         </ResourceDictionary>
       </OnPlatform.Android>
     </OnPlatform>
